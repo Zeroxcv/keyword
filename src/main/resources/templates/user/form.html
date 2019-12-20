@@ -8,7 +8,7 @@
 <body>
 <div th:replace="~{common/header::header}"></div>
 <h4 th:text="${userModel.title}">lisk</h4>
-<form action="/user" th:action="@{/user}" method="post" th:object="${userModel.user}">
+<form action="/user" th:action="@{/user/list}" method="post" th:object="${userModel.user}">
     <input type="hidden" name="id" th:value="*{id}">
     名字<br/>
     <input type="text" name="name" th:value="*{name}">
@@ -17,6 +17,6 @@
     <br/>
     <input type="submit" value="提交">
 </form>
-<div th:replace="~{common/footer::footer}"></div>
+<div th:replace="{common/footer::footer}"></div>
 </body>
 </html>
