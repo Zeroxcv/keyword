@@ -3,10 +3,15 @@ package com.lisk.keyword.controller;
 import com.lisk.keyword.pojo.User;
 import com.lisk.keyword.repository.UserRepository;
 import com.lisk.keyword.service.UserService;
+import com.lisk.keyword.util.Ltp;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.io.UnsupportedEncodingException;
 
 @RestController
 @RequestMapping("/user")
@@ -20,7 +25,7 @@ public class UserController {
     //查词所有用户
     //入口
     @GetMapping("/userlist")
-    public ModelAndView userList(Model model){
+    public ModelAndView userList(Model model)throws UnsupportedEncodingException {
 //        model.addAttribute("userList",userRepository.userList());
 //        model.addAttribute("title","用户管理");
 //        return  new ModelAndView("user/list","userModel",model);
@@ -29,6 +34,27 @@ public class UserController {
         return  new ModelAndView("user/list","userModel",model);
 
     }
+    @RequestMapping(value = "/userlist/keyword" ,method=RequestMethod.POST)
+    public ModelAndView getKeyword(Model model ,@RequestParam("text")String text) throws UnsupportedEncodingException{
+        System.out.println(text);
+        String keywordData;
+        keywordData = Ltp.getLtpData(new String(text));
+//        JSONArray jsonArray = JSONArray.fromObject(keywordData);
+//        for(int i=0; i<jsonArray.size();i++){
+//            System.out.println((jsonArray.getJSONObject(i).getString("code")));
+//        }
+        //解析返回的JSON数据
+        JSONObject jsonObject = JSONObject.fromObject(keywordData);
+        System.out.println(jsonObject.getString("data"));
+        JSONArray jsonArray = JSONArray.fromObject(JSONObject.fromObject(jsonObject.getString("data")).getString("ke"));
+        for(int i = 0; i < jsonArray.size(); i++){
+            System.out.println(jsonArray.getJSONObject(i).getString("word"));
+        }
+        //返回JSON数据
+        model.addAttribute("keywordData",keywordData);
+        return new ModelAndView("user/keyword","userModel",model);
+    }
+
     //根据id 查询用户
     @GetMapping("{id}")
     public ModelAndView view(@PathVariable("id") Long id, Model model){

@@ -1,0 +1,15 @@
+
+spring:
+  #模版引擎配置
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    mode: html5
+  #数据库连接配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?serverTimezone=UTC
+    username: root
+    password: 123
+mybatis:
+  mapper-locations: "classpath:mapper/*.xml"
+

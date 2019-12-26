@@ -2,38 +2,37 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                var textContent = document.getElementById("t1").value;
+                alert(textContent)
+                $.post("/user/userlist/keyword",{
+                        name:"菜鸟教程",
+                        url:"localhost:8080",
+                        text:textContent
+                    },
+                    function(data,status){
+                        alert("数据: \n" + data + "\n状态: " + status);
+                    });
+            });
+        });
+    </script>
+
     <title>用户列表</title>
 </head>
+
 <body>
-<div th:replace="~{common/header::header}"></div>
-<h4 th:text="${userModel.title}">
-</h4>
-<div>
-    <a href="/user/form" th:href="@{/user/form}">
-        新建用户
-    </a>
-</div>
-<table border="2">
-    <thead>
-    <tr>
-        <td>id</td>
-        <td>名字</td>
-        <td>年龄</td>
-        <td>管理</td>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:if="${userModel.userList.size()} eq 0">
-        <td colspan="3">无数据！</td>
-    </tr>
-    <tr th:each="user:${userModel.userList}">
-        <td th:text="${user.id}"></td>
-        <td><a th:href="@{'/user/'+${user.id}}" th:text="${user.name}"></a></td>
-        <td th:text="${user.age}"></td>
-        <td><a th:href="@{'/user/delete/'+${user.id}}">删除</a></td>
-    </tr>
-    </tbody>
-</table>
-<div th:replace="~{common/footer::footer}"></div>
+
+<!--    <b th:text="${keywordData}"/>-->
+<!--<form action="/user/userlist/keyword" method="post">-->
+<!--    First name:<br>-->
+<!--    <input type="text" name="text" value="text">    <br>-->
+<!--    <input type="submit" value="Submit">-->
+<!--</form>-->
+    <input type="text" id="t1" value="输入文字"><br>
+    <button id="b1">输入文字内容</button>
 </body>
 </html>
