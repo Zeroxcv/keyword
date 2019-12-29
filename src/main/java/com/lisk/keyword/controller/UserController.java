@@ -35,7 +35,7 @@ public class UserController {
 
     }
     @RequestMapping(value = "/userlist/keyword" ,method=RequestMethod.POST)
-    public ModelAndView getKeyword(Model model ,@RequestParam("text")String text) throws UnsupportedEncodingException{
+    public String getKeyword(Model model ,@RequestParam("text")String text) throws UnsupportedEncodingException{
         System.out.println(text);
         String keywordData;
         keywordData = Ltp.getLtpData(new String(text));
@@ -52,7 +52,7 @@ public class UserController {
         }
         //返回JSON数据
         model.addAttribute("keywordData",keywordData);
-        return new ModelAndView("user/keyword","userModel",model);
+        return JSONObject.fromObject(jsonObject.getString("data")).getString("ke");
     }
 
     //根据id 查询用户

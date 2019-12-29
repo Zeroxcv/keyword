@@ -15,7 +15,16 @@
                         text:textContent
                     },
                     function(data,status){
-                        alert("数据: \n" + data + "\n状态: " + status);
+                        <!--alert("数据: \n" + data + "\n状态: " + status);-->
+                        var tableInfos = document.getElementById('tableInfo');
+                        var jsonobj= eval('(' + data + ')');
+                        var code = '<TABLE style="width:900px;height:350px;" border="1">';
+                        code += '<TR><TH>单词</TH><TH>权重</TH></TR>';
+                        for(var i=0;i<jsonobj.length;i++){
+
+                            code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
+                        }
+                        tableInfos.innerHTML = code + '</TABLE>';
                     });
             });
         });
@@ -34,5 +43,8 @@
 <!--</form>-->
     <input type="text" id="t1" value="输入文字"><br>
     <button id="b1">输入文字内容</button>
+    <div id="tableInfo">
+
+    </div>
 </body>
 </html>
