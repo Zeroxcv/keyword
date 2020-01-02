@@ -1,7 +1,9 @@
 package com.lisk.keyword.controller;
 
+import com.lisk.keyword.pojo.Essay;
 import com.lisk.keyword.pojo.User;
 import com.lisk.keyword.repository.UserRepository;
+import com.lisk.keyword.service.EssayService;
 import com.lisk.keyword.service.UserService;
 import com.lisk.keyword.util.Ltp;
 import net.sf.json.JSONArray;
@@ -12,6 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -23,75 +28,52 @@ public class UserController {
     @Autowired
     private UserService userService;
     //查词所有用户
+    @Autowired
+    private EssayService essayService;
     //入口
     @GetMapping("/userlist")
     public ModelAndView userList(Model model)throws UnsupportedEncodingException {
 //        model.addAttribute("userList",userRepository.userList());
 //        model.addAttribute("title","用户管理");
-//        return  new ModelAndView("user/list","userModel",model);
-        model.addAttribute("userList",userService.list());
+//        return  new ModelAndView("user/list","userModel",model)
         model.addAttribute("title","用户管理");
         return  new ModelAndView("user/list","userModel",model);
 
     }
+    //调用讯飞提取关键词接口
     @RequestMapping(value = "/userlist/keyword" ,method=RequestMethod.POST)
     public String getKeyword(Model model ,@RequestParam("text")String text) throws UnsupportedEncodingException{
         System.out.println(text);
         String keywordData;
-        keywordData = Ltp.getLtpData(new String(text));
-//        JSONArray jsonArray = JSONArray.fromObject(keywordData);
-//        for(int i=0; i<jsonArray.size();i++){
-//            System.out.println((jsonArray.getJSONObject(i).getString("code")));
-//        }
+        keywordData = Ltp.getLtpData(text);
         //解析返回的JSON数据
         JSONObject jsonObject = JSONObject.fromObject(keywordData);
-        System.out.println(jsonObject.getString("data"));
-        JSONArray jsonArray = JSONArray.fromObject(JSONObject.fromObject(jsonObject.getString("data")).getString("ke"));
-        for(int i = 0; i < jsonArray.size(); i++){
-            System.out.println(jsonArray.getJSONObject(i).getString("word"));
+        //{"code":"0",
+        // "data":{"ke":[{"score":"0.907","word":"关键词"},{"score":"0.867","word":"提取"}]},
+        // "desc":"success",
+        // "sid":"ltp003889ed@dx23571166478fa00100"}
+        if("success".equals(jsonObject.getString("desc"))){
+            System.out.println("success");
+            JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("ke");
+            for(int i = 0; i < jsonArray.size(); i++){
+                System.out.println(jsonArray.getJSONObject(i).getString("word"));
+            }
+            //返回JSON数据
+            //model.addAttribute("keywordData",keywordData);
+            return JSONObject.fromObject(jsonObject.getString("data")).getString("ke");
         }
-        //返回JSON数据
-        model.addAttribute("keywordData",keywordData);
-        return JSONObject.fromObject(jsonObject.getString("data")).getString("ke");
+        else{
+            return "error";
+        }
+
     }
 
-    //根据id 查询用户
-    @GetMapping("{id}")
-    public ModelAndView view(@PathVariable("id") Long id, Model model){
-        User user= userRepository.getUserById(id);
-        model.addAttribute("user",user);
-        model.addAttribute("title","查看用户");
-        return new ModelAndView("user/view" ,"userModel",model);
-    }
+    @RequestMapping(value = "/userlist/1" ,method=RequestMethod.GET)
+    //查询文章的关键词
+    public List<Essay> listEssays(){
 
-    //获取创建表单页面
-    @GetMapping("/form")
-    public ModelAndView createForm(Model model){
-        model.addAttribute("user",new User());
-        model.addAttribute("title","创建用户");
-        return new ModelAndView("user/form","userModel",model);
-    }
-
-    //保存用户
-    @PostMapping
-    public ModelAndView saveOrUpdateUser(User user){
-        user =userRepository.saveOrUpdateUser(user);
-        return new ModelAndView("redirect:/user/userlist");
-    }
-
-    //根据id删除用户
-    @GetMapping(value = "delete/{id}")
-    public ModelAndView delete(@PathVariable("id") Long id){
-        userRepository.deleteUser(id);
-        return new ModelAndView("redirect:/user/userlist");
-    }
-
-    //修改用户界面
-    @GetMapping(value = "edit/{id}")
-    public ModelAndView editForm(@PathVariable("id") Long id, Model model){
-        User user =userRepository.getUserById(id);
-        model.addAttribute("user",user);
-        model.addAttribute("title","编辑用户");
-        return new ModelAndView("user/form" ,"userModel",model);
+        List<Essay> list;
+        list = essayService.listEssays();
+        return list;
     }
 }

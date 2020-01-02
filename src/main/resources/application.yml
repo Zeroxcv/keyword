@@ -1,5 +1,10 @@
 
 spring:
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  freemarker:
+    cache: false    #页面不加载缓存，修改即时生效
   #模版引擎配置
   thymeleaf:
     encoding: UTF-8
@@ -7,9 +12,11 @@ spring:
     mode: html5
   #数据库连接配置
   datasource:
-    url: jdbc:mysql://localhost:3306/user?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/keyword?serverTimezone=UTC
     username: root
     password: 123
 mybatis:
   mapper-locations: "classpath:mapper/*.xml"
+  configuration:
+    map-underscore-to-camel-case: true
 
