@@ -14,8 +14,11 @@ public class Essay {
     }
 
     public Essay(int id, String textLabel, String title, String textContent, Date publishedData, String dataSources) {
+        //文章id
         this.id = id;
+        //文章标题
         this.textLabel = textLabel;
+
         this.title = title;
         this.textContent = textContent;
         this.publishedData = publishedData;

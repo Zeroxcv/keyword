@@ -6,6 +6,7 @@ import com.lisk.keyword.repository.UserRepository;
 import com.lisk.keyword.service.EssayService;
 import com.lisk.keyword.service.UserService;
 import com.lisk.keyword.util.Ltp;
+import com.lisk.keyword.util.Page;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -46,6 +48,8 @@ public class UserController {
         System.out.println(text);
         String keywordData;
         keywordData = Ltp.getLtpData(text);
+        if(keywordData.equals(""))
+            return "error";
         //解析返回的JSON数据
         JSONObject jsonObject = JSONObject.fromObject(keywordData);
         //{"code":"0",
@@ -69,11 +73,14 @@ public class UserController {
     }
 
     @RequestMapping(value = "/userlist/1" ,method=RequestMethod.GET)
-    //查询文章的关键词
+    //分页查询文章
     public List<Essay> listEssays(){
-
+        Page page = new Page();
+        page.setStart(1000);
+        page.setCount(Page.getDefaultCount());
         List<Essay> list;
-        list = essayService.listEssays();
+        list = essayService.listEssays(page);
+        System.out.println(list.size());
         return list;
     }
 }

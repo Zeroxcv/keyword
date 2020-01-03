@@ -6,8 +6,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
+
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" >
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.css}" >
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap1.css}" >
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" th:href="@{/vendor/font-awesome/css/font-awesome.min.css}">
     <!-- Fontastic Custom icon font-->
@@ -40,7 +42,7 @@
                         var tableInfos = document.getElementById('tableInfo1');
                         var jsonobj= eval('(' + data + ')');
                         var code = '<TABLE class="table table-striped">';
-                        code += '<TR><TH>单词</TH><TH>权重</TH></TR>';
+                        code += '<TR><TH><关键词></关键词></TH><TH>权重</TH></TR>';
                         for(var i=0;i<jsonobj.length;i++){
 
                             code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
@@ -51,7 +53,29 @@
 
             $("#b2").click(function(){
                 $.get("/user/userlist/1",function(data,status){
-                    alert("数据：" + data + "\n状态：" + status);
+                    alert(data);
+                    var arr = data;
+                    var tableInfos = document.getElementById('tableInfo1');
+                    var code = '<TABLE class="table table-striped">';
+                    code = code +
+                            '<TR>' +
+                                '<TH>类型</TH>' +
+                                '<TH>标题</TH>' +
+                                '<TH>内容</TH>' +
+                            '</TR>';
+                    for(var i=0;i<arr.length;i++) {
+                        var textLabel    = arr[i]["textLabel"];
+                        var title        = arr[i]["title"];
+                        var textContent  = arr[i]["textContent"];
+                        var code = code +
+                            '<TR>' +
+                                '<TD>'+textLabel+'</TD>' +
+                                '<TD>'+title+'</TD>' +
+                                '<TD>'+textContent.substring(0,30)+'</TD>' +
+                            '</TR>';
+
+                    }
+                    tableInfos.innerHTML = code + '</TABLE>';
                 });
             });
         });
@@ -165,19 +189,41 @@
             </div>
             <div style="padding: 10px 10px 10px 10px;">
                 <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%">提取</button>
+                <button  class="btn btn-primary btn-lg" id="b2">搜索</button>
             </div>
 
 
             <div id="tableInfo1" class="table table-striped">
             </div>
-            <button  class="btn btn-primary btn-lg" id="b2">搜索</button>
-            <div id="tableInfo2" >
+
+            <div id="paging">
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+
         </div>
 
         </div>
     </div>
-
 </div>
+
+
 </body>
 </html>
