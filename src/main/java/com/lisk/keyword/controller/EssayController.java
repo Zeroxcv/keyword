@@ -28,7 +28,7 @@ public class EssayController {
     private UserService userService;
     //查词所有用户
     @Autowired
-    private EssayService essayService;
+    EssayService essayService;
     //入口
     @GetMapping("")
     public ModelAndView userList(Model model)throws UnsupportedEncodingException {
