@@ -6,16 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
-
     <!-- Bootstrap CSS-->
-    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.css}" >
-    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap1.css}" >
+    <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" >
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" th:href="@{/vendor/font-awesome/css/font-awesome.min.css}">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" th:href="@{/css/fontastic.css}">
-    <!-- Google fonts - Poppins -->
-    <link rel="stylesheet" th:href="@{https://fonts.googleapis.com/css?family=Poppins:300,400,700}">
+
     <!-- theme stylesheet-->
     <link rel="stylesheet" th:href="@{/css/style.default.css}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -29,67 +26,34 @@
     <script th:src="@{https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js}">
     </script>
     <script>
-        function ExtractKeywords(){
-            var textContent = document.getElementById("t1").value;
-            alert(textContent)
-            $.post("/index/keyword",{
-                    url:"localhost:8080",
-                    text:textContent
-                },
-                function(data,status){
-                    alert("数据: \n" + data + "\n状态: " + status);
-                    var tableInfos = document.getElementById('tableInfo1');
-                    var jsonobj= eval('(' + data + ')');
-                    var code = '<TABLE class="table table-striped">';
-                    code += '<TR><TH><关键词></关键词></TH><TH>权重</TH></TR>';
-                    for(var i=0;i<jsonobj.length;i++){
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                var textContent = document.getElementById("t1").value;
+                alert(textContent);
+                $.post("/index/keyword",{
+                        url:"localhost:8080",
+                        text:textContent
+                    },
+                    function(data,status){
+                        alert("数据: \n" + data + "\n状态: " + status);
+                        var tableInfos = document.getElementById('tableInfo1');
+                        var jsonobj= eval('(' + data + ')');
+                        var code = '<TABLE class="table table-striped">';
+                        code += '<TR><TH><关键词></关键词></TH><TH>权重</TH></TR>';
+                        for(var i=0;i<jsonobj.length;i++){
 
-                        code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
-                    }
-                    tableInfos.innerHTML = code + '</TABLE>';
+                            code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
+                        }
+                        tableInfos.innerHTML = code + '</TABLE>';
+                    });
+            });
+
+            $("#b2").click(function(){
+                $.get("/index/essaylist/1",function(data,status){
+
                 });
-
-
-        }
-
-        function souchExtract(){
-            $.get("/index/essaylist/1",function(data,status){
-                alert(data);
-                var arr = data;
-                var tableInfos = document.getElementById('tableInfo1');
-                var code = '<TABLE class="table table-striped">';
-                code = code +
-                    '<TR>' +
-                    '<TH>类型</TH>' +
-                    '<TH>标题</TH>' +
-                    '<TH>内容</TH>' +
-                    '</TR>';
-                for(var i=0;i<arr.length;i++) {
-                    var textLabel    = arr[i]["textLabel"];
-                    var title        = arr[i]["title"];
-                    var textContent  = arr[i]["textContent"];
-                    var code = code +
-                        '<TR>' +
-                        '<TD>'+textLabel+'</TD>' +
-                        '<TD>'+title+'</TD>' +
-                        '<TD>'+textContent.substring(0,30)+'</TD>' +
-                        '</TR>';
-
-                }
-                tableInfos.innerHTML = code + '</TABLE>';
             });
-        }
-
-
-        function MenuExtractAearch() {
-            $.get("/index/extractSearch",function(data,status){
-                alert(data);
-                var content = document.getElementById('ExtractContent');
-                content.innerHTML = data;
-            });
-
-
-        }
+        });
     </script>
 
     <title>用户列表</title>
@@ -112,7 +76,7 @@
             <div class="search-box">
                 <button class="dismiss"><i class="icon-close"></i></button>
                 <form id="searchForm" action="#" role="search">
-                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                    <input type="search" placeholder="What are you looking for..." class="form-control"/>
                 </form>
             </div>
             <div class="container-fluid">
@@ -174,9 +138,9 @@
             </div>
             <!-- Sidebar Navidation Menus--><span class="heading">菜单</span>
             <ul class="list-unstyled">
-                <li class="active" id="li1"><a href="index.html"> <i class="icon-home"></i>提取关键词</a></li>
-                <li id="li2"><a  onclick="MenuExtractAearch()"> <i class="icon-grid"></i>搜索文章</a></li>
-                <li id="li3"><a href="charts.html"> <i class="fa fa-bar-chart"></i>报表</a></li>
+                <li class="active"><a href="index.html"> <i class="icon-home"></i>提取关键词</a></li>
+                <li><a href="/index/extractSearch"> <i class="icon-grid"></i>查询文章</a></li>
+                <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>报表</a></li>
                 <li><a href="forms.html"> <i class="icon-padnote"></i>填写内容</a></li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>一级菜单</a>
                     <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
@@ -188,53 +152,31 @@
             </ul>
 
         </nav>
-        <div class="content-inner" style="padding-bottom: 78.4px" id="ExtractContent">
+        <div class="content-inner" style="padding-bottom: 78.4px">
             <header class="page-header">
                 <div class="container-fluid">
                     <h2 class="no-margin-bottom">提取关键词</h2>
                 </div>
             </header>
-        <div style="padding: 10px 10px 10px 10px">
             <div style="padding: 10px 10px 10px 10px">
-                <textarea class="form-control" rows="8" id="t1" ></textarea>
-            </div>
-            <div style="padding: 10px 10px 10px 10px;">
-                <button onclick="ExtractKeywords()" class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%">提取</button>
-                <button onclick="souchExtract()" class="btn btn-primary btn-lg" id="b2">搜索</button>
-            </div>
+                <div style="padding: 10px 10px 10px 10px">
+                    <textarea class="form-control" rows="8" id="t1" ></textarea>
+                </div>
+                <div style="padding: 10px 10px 10px 10px;">
+                    <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%">提取</button>
+                </div>
 
 
-            <div id="tableInfo1" class="table table-striped">
+                <div id="tableInfo1" class="table table-striped">
+                </div>
+                <button  class="btn btn-primary btn-lg" id="b2">搜索</button>
+                <div id="tableInfo2" >
+                </div>
             </div>
-
-            <div id="paging">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
 
         </div>
     </div>
+
 </div>
-
-
 </body>
 </html>
