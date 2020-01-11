@@ -12,7 +12,6 @@
     <link rel="stylesheet" th:href="@{/vendor/font-awesome/css/font-awesome.min.css}">
     <!-- Fontastic Custom icon font-->
     <link rel="stylesheet" th:href="@{/css/fontastic.css}">
-
     <!-- theme stylesheet-->
     <link rel="stylesheet" th:href="@{/css/style.default.css}" id="theme-stylesheet">
     <!-- Custom stylesheet - for your changes-->
@@ -39,7 +38,7 @@
                         var tableInfos = document.getElementById('tableInfo1');
                         var jsonobj= eval('(' + data + ')');
                         var code = '<TABLE class="table table-striped">';
-                        code += '<TR><TH><关键词></关键词></TH><TH>权重</TH></TR>';
+                        code += '<TR><TH>关键词</TH><TH>权重</TH></TR>';
                         for(var i=0;i<jsonobj.length;i++){
 
                             code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
@@ -50,7 +49,19 @@
 
             $("#b2").click(function(){
                 $.get("/index/essaylist/1",function(data,status){
+                    alert("数据: \n" + data + "\n状态: " + status);
+                    var tableInfos = document.getElementById('tableInfo1');
+                    var jsonobj= eval('(' + data + ')');
+                    var code = '<TABLE class="table table-striped">';
+                    code += '<TR>' +
+                        '<TH>关键词</TH>' +
+                        '<TH>权重</TH>' +
+                        '</TR>';
+                    for(var i=0;i<jsonobj.length;i++){
 
+                        code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
+                    }
+                    tableInfos.innerHTML = code + '</TABLE>';
                 });
             });
         });
@@ -118,7 +129,6 @@
                                 <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
                             </ul>
                         </li>
-
                         <!-- Logout    -->
                         <li class="nav-item"><a href="login.html" class="nav-link logout"> <span class="d-none d-sm-inline">退出</span><i class="fa fa-sign-out"></i></a></li>
                     </ul>
@@ -173,10 +183,8 @@
                 <div id="tableInfo2" >
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
 </body>
 </html>
