@@ -3,8 +3,13 @@
 
 <mapper namespace="com.lisk.keyword.mapper.EssayMapper">
 
-    <select id="listEssays" resultType="com.lisk.keyword.pojo.Essay">
-        SELECT * from t_pdarticle
+    <select id="listEssays" parameterType="com.lisk.keyword.util.Page" resultType="com.lisk.keyword.pojo.Essay">
+        SELECT * from t_pdarticle order by id
+        <if test="start!=null and count!=null">
+            limit #{start},#{count}
+        </if>
+
+
     </select>
 
 </mapper>

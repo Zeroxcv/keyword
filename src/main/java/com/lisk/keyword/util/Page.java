@@ -8,7 +8,7 @@ public class Page {
     private int count;
     //总个数
     private int total;
-    private static final int defaultCount = 6;
+    private static final int defaultCount = 10;
 
     public Page() {
     }

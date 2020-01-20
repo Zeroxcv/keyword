@@ -18,7 +18,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "/index")
+@RequestMapping(value = "")
 public class EssayController {
 
     @Autowired
@@ -67,12 +67,18 @@ public class EssayController {
 
     }
 
-    @ResponseBody
-    @RequestMapping(value = "/essaylist/1" ,method=RequestMethod.GET)
+    @RequestMapping(value = "/essay")
+    public String Essay(){
+        return "essay/essay";
+    }
+
     //分页查询文章
-    public List<Essay> listEssays(){
+    @ResponseBody
+    @RequestMapping(value = "/essay/list/{start}" ,method=RequestMethod.GET)
+    public List<Essay> listEssays(@PathVariable("start")Integer start){
         Page page = new Page();
-        page.setStart(1000);
+        start = start * 10 ;
+        page.setStart(start);
         page.setCount(Page.getDefaultCount());
         List<Essay> list;
         list = essayService.listEssays(page);
