@@ -25,6 +25,9 @@
     <script th:src="@{https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js}">
     </script>
     <script>
+
+
+
         $(document).ready(function(){
             $("#b1").click(function(){
                 var textContent = document.getElementById("t1").value;
@@ -49,22 +52,36 @@
 
             $("#b2").click(function(){
                 $.get("/essay/list/1",function(data,status){
-                    alert("数据: \n" + data + "\n状态: " + status);
-                    var tableInfos = document.getElementById('tableInfo1');
-                    var jsonobj= data;
-                    var code = '<TABLE class="table table-striped">';
-                    code += '<TR>' +
-                        '<TH>关键词</TH>' +
-                        '<TH>权重</TH>' +
-                        '</TR>';
-                    for(var i=0;i<jsonobj.length;i++){
+                alert("数据: \n" + data + "\n状态: " + status);
+                var tableInfos = document.getElementById('tableInfo1');
+                var jsonobj= data;
+                var code = '<TABLE class="table table-striped">';
+                code += '<TR>' +
+                    '<TH>编号</TH>' +
+                    '<TH>标题</TH>' +
+                    '<TH>内容</TH>' +
+                    '<TH>时间</TH>' +
+                    '</TR>';
+                for(var i=0;i<jsonobj.length;i++){
 
-                        code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
-                    }
-                    tableInfos.innerHTML = code + '</TABLE>';
-                });
+                    code += '<TR><TD>'+jsonobj[i].id+'' +
+                        '</TD><TD>'+jsonobj[i].title+ '</TD>' +
+                        '<TD>'+jsonobj[i].textContent+'</TD>'+
+                        '<TD>'+jsonobj[i].publishedData+'</TD>'+
+                        '</TR>';
+                }
+                tableInfos.innerHTML = code + '</TABLE>';
             });
         });
+        });
+
+        function queryPost(){
+                $.get("/essay",function(data,status){
+                    alert("数据: \n" + data + "\n状态: " + status);
+                    var tableInfos = document.getElementById('showContent');
+                    tableInfos.innerHTML = data;
+                });
+        }
     </script>
 
     <title>用户列表</title>
@@ -124,7 +141,7 @@
             <span class="heading">菜单</span>
             <ul class="list-unstyled">
                 <li class="active"><a href="index.html"> <i class="icon-home"></i>提取关键词</a></li>
-                <li><a href="/essay"> <i class="icon-grid"></i>查询文章</a></li>
+                <li><a onclick="queryPost()"> <i class="icon-grid"></i>查询文章</a></li>
                 <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>报表</a></li>
                 <li><a href="forms.html"> <i class="icon-padnote"></i>填写内容</a></li>
                 <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>一级菜单</a>
@@ -137,7 +154,7 @@
             </ul>
 
         </nav>
-        <div class="content-inner" style="padding-bottom: 78.4px">
+        <div class="content-inner" style="padding-bottom: 78.4px" id="showContent">
             <header class="page-header">
                 <div class="container-fluid">
                     <h2 class="no-margin-bottom">提取关键词</h2>
