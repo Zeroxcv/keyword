@@ -9,7 +9,8 @@
             limit #{start},#{count}
         </if>
 
-
     </select>
-
+    <select id="findAll" resultType="com.lisk.keyword.pojo.Essay">
+        select * from t_pdarticle
+    </select>
 </mapper>

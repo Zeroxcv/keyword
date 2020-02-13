@@ -1,13 +1,24 @@
 package com.lisk.keyword.pojo;
 
-import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 
+import java.util.Date;
+@TableName(value = "t_pdarticle")
 public class Essay {
+    //文章id
+    @TableId(type = IdType.AUTO)
     int id;
+    //文章标签
     String textLabel;
+    //文章标题
     String title;
+    //文章内容
     String textContent;
+    //文章发布日期
     Date publishedData;
+    //文章来源
     String dataSources;
 
     public Essay() {
@@ -18,7 +29,7 @@ public class Essay {
         this.id = id;
         //文章标题
         this.textLabel = textLabel;
-
+        //文章标题
         this.title = title;
         this.textContent = textContent;
         this.publishedData = publishedData;

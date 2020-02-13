@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.UnsupportedEncodingException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "")
@@ -75,18 +77,32 @@ public class EssayController {
     //分页查询文章
     @ResponseBody
     @RequestMapping(value = "/essay/list/{start}" ,method=RequestMethod.GET)
-    public List<Essay> listEssays(@PathVariable("start")Integer start){
+    public Map listEssays(@PathVariable("start")Integer start){
         Page page = new Page();
         start = start * 10 ;
         page.setStart(start);
         page.setCount(Page.getDefaultCount());
         List<Essay> list;
+
         list = essayService.listEssays(page);
-        System.out.println(list.size());
-        return list;
+        Map map = new HashMap<>();
+        map.put("list",list);
+        map.put("page",page);
+        return map;
     }
     @RequestMapping(value = "/extractSearch",method = RequestMethod.GET)
     public ModelAndView extractSearch(Model model){
         return  new ModelAndView("essay/extractSearch","essayModel",model);
     }
+    @ResponseBody
+    @RequestMapping(value = "/essay/findAll" ,method=RequestMethod.GET)
+    public List<Essay> findAll(){
+        return essayService.findAll();
+    }
+    @GetMapping(value = "/add")
+    public String addEssay(){
+        return "essay/";
+    }
+
+
 }

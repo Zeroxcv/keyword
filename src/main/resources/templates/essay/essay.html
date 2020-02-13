@@ -4,20 +4,143 @@
             <h2 class="no-margin-bottom">搜索文章</h2>
         </div>
     </header>
-    <div style="padding: 10px 10px 10px 10px">
-        <div style="padding: 10px 10px 10px 10px">
-            <textarea class="form-control" rows="8" id="t1" ></textarea>
-        </div>
-        <div style="padding: 10px 10px 10px 10px;">
-            <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%">提取</button>
-        </div>
+<!--    <div style="padding: 10px 10px 10px 10px">-->
+<!--        <div style="padding: 10px 10px 10px 10px">-->
+<!--            <textarea class="form-control" rows="8" id="t1" ></textarea>-->
+<!--        </div>-->
+<!--        <div style="padding: 10px 10px 10px 10px;">-->
+<!--            <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%" onclick="extract()">提取</button>-->
+<!--        </div>-->
 
 
-        <div id="tableInfo1" class="table table-striped">
-        </div>
-        <button  class="btn btn-primary btn-lg" id="b2">搜索</button>
-        <div id="tableInfo2" >
-            <form >
-            </form>
-        </div>
-    </div>
+<!--        <div id="tableInfo1" class="table table-striped">-->
+<!--        </div>-->
+<!--        <button  class="btn btn-primary btn-lg" id="b2" onclick="queryPostById()">搜索</button>-->
+
+<!--        <div id="tableInfo2" >-->
+<!--            <form >-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script>-->
+<!--        $(function(){-->
+<!--            $("ul.pagination li.disabled a").click(function(){-->
+<!--                return false;-->
+
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+
+
+<!--    <script>-->
+<!--        function queryPostById(){-->
+<!--            $.get("/essay/list/1",function(data,status){-->
+<!--                alert("数据: \n" + data + "\n状态: " + status);-->
+<!--                var tableInfos = document.getElementById('tableInfo1');-->
+<!--                var list = data["list"];-->
+<!--                var page = data["page"];-->
+<!--                alert(list);-->
+<!--                alert(page);-->
+<!--                var jsonobj= data;-->
+<!--                var code = '<TABLE class="table table-striped">';-->
+<!--                code += '<TR>' +-->
+<!--                    '<TH>编号</TH>' +-->
+<!--                    '<TH>标题</TH>' +-->
+<!--                    '<TH>内容</TH>' +-->
+<!--                    '<TH>时间</TH>' +-->
+<!--                    '</TR>';-->
+<!--                for(var i=0;i<jsonobj.length;i++){-->
+
+<!--                    code += '<TR><TD>'+jsonobj[i].id+'' +-->
+<!--                        '</TD><TD>'+jsonobj[i].title+ '</TD>' +-->
+<!--                        '<TD>'+jsonobj[i].textContent+'</TD>'+-->
+<!--                        '<TD>'+jsonobj[i].publishedData+'</TD>'+-->
+<!--                        '</TR>';-->
+<!--                }-->
+<!--                tableInfos.innerHTML = code + '</TABLE>';-->
+<!--            });-->
+<!--        }-->
+<!--    </script>-->
+<!--    <nav aria-label="Page navigation">-->
+<!--        <ul class="pagination">-->
+<!--            <li>-->
+<!--                <a href="#" aria-label="Previous">-->
+<!--                    <span aria-hidden="true">&laquo;</span>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li><a href="#  ">1</a></li>-->
+<!--            <li><a href="#">2</a></li>-->
+<!--            <li><a href="#">3</a></li>-->
+<!--            <li><a href="#">4</a></li>-->
+<!--            <li><a href="#">5</a></li>-->
+<!--            <li>-->
+<!--                <a href="#" aria-label="Next">-->
+<!--                    <span aria-hidden="true">&raquo;</span>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+    <html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.css}" >
+        <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap1.css}" >
+        <link th:href="@{/bootstrap-table-master/dist/bootstrap-table.css}" rel="stylesheet"/>
+        <script th:src="@{/vendor/jquery/jquery-3.4.1.js}"></script>
+        <script th:src="@{/vendor/bootstrap/bootstrap.js}"></script>
+        <script th:src="@{/bootstrap-table-master/dist/bootstrap-table.js}"></script>
+        <script>
+           function queryEssayAll() {
+                $("#mytable").bootstrapTable({
+                    url:"/essay/findAll",  //请求地址
+                    striped : true, //是否显示行间隔色
+                    pageNumber : 1, //初始化加载第一页
+                    pagination : true,//是否分页
+                    sidePagination : 'client',//server:服务器端分页|client：前端分页
+                    pageSize : 5,//单页记录数
+                    pageList : [ 5, 10],//可选择单页记录数
+                    showRefresh : true,//刷新按钮
+                    columns : [ {
+                        title : '编号',
+                        field : 'id',
+                        sortable : true
+                    }, {
+                        title : '文章标签',
+                        field : 'textLabel',
+                        sortable : true
+                    }, {
+                        title : '文章标题',
+                        field : 'title',
+                        sortable : true
+                    },{
+                        title : '文章内容',
+                        field : 'textContent',
+                        sortable : true,
+                        cellStyle:{
+                            css:{
+                                "overflow": "hidden",
+                                "text-overflow": "ellipsis",
+                                "white-space": "nowrap"
+                            }
+                        }
+                    },{
+                        title : '文章发布日期',
+                        field : 'publishedData',
+                        sortable : true
+                    },{
+                        title : '文章来源',
+                        field : 'dataSources',
+                        sortable : true
+                    }]
+                })
+            }
+        </script>
+    </head>
+    <body>
+    <table id="mytable"></table>
+
+    </body>
+
+    </html>
