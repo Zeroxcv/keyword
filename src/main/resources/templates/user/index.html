@@ -6,7 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="robots" content="all,follow">
+
     <!-- Bootstrap CSS-->
+
     <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap.css}" >
     <link rel="stylesheet" th:href="@{/vendor/bootstrap/css/bootstrap1.css}" >
     <link th:href="@{/bootstrap-table-master/dist/bootstrap-table.css}" rel="stylesheet"/>
@@ -21,13 +23,12 @@
     <!-- Favicon-->
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}">
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-    <script th:src="@{https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js}"></script>
-    <script th:src="@{https://oss.maxcdn.com/respond/1.4.2/respond.min.js}"></script><![endif]-->
+
     <script th:src="@{/vendor/jquery/jquery-3.4.1.js}"></script>
     <script th:src="@{/bootstrap-table-master/dist/bootstrap-table.js}"></script>
     <script th:src="@{/vendor/popper/popper.min.js}"></script>
     <script th:src="@{/vendor/js/front.js}"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
 
         function extract(){
@@ -59,7 +60,29 @@
                 $(".showContent").load(location.href+" .showContent");
             });*/
         }
+        //左侧不同的标签更改成响应的页面
+        function ajaxPage(data){
+            var labelId = document.getElementById('labelId');
+            temporary = data.innerHTML;
+             labelId.innerHTML = temporary;
+            var tableInfos = document.getElementById('tableInfo1');
+            tableInfos.innerHTML = "";
+            if(temporary =="文章录入"){
+                $.get("/essay/add",function(data,status){
+                    // tableInfos = document.getElementById('tableInfo1');
 
+                    tableInfos.innerHTML = data.toString();
+                });
+                
+            }
+            else if(temporary == "文章关键词识别" ){
+                alert("文章关键词识别");
+            }
+            else if( temporary == "查询文章"){
+                alert("查询文章");
+            }
+
+        }
         function queryEssayAll() {
             var tableInfos = document.getElementById('tableInfo1');
             tableInfos.innerHTML = "";
@@ -108,7 +131,7 @@
                     field : 'dataSources',
                     sortable : true
                 },{
-                    title: '操作    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加文章</button>',
+                    title: '操作    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加文章</a>',
                     field: 'publicationTime',
                     formatter: operation,//对资源进行操作
 
@@ -120,19 +143,56 @@
                 "<a href='/modify_one.xhtml?bookName=" + row["bookName"] + "'>修改</a>"
             return htm;
         }
+        function addEssay() {
+            $.ajax({
+                //几个参数需要注意一下
+                type: "POST",//方法类型
+                dataType: "text",//预期服务器返回的数据类型 如果是对象返回的是json 如果是字符串这里一定要定义text 之前我就是定义json 结果字符串的返回一直到额error中去
+                /*
+                dataType:
+                    要求为String类型的参数，预期服务器返回的数据类型。如果不指定，JQuery将自动根据http包mime信息返回responseXML或responseText，并作为回调函数参数传递。可用的类型如下：
+                    xml：返回XML文档，可用JQuery处理。
+                    html：返回纯文本HTML信息；包含的script标签会在插入DOM时执行。
+                    script：返回纯文本JavaScript代码。不会自动缓存结果。除非设置了cache参数。注意在远程请求时（不在同一个域下），所有post请求都将转为get请求。
+                    json：返回JSON数据。
+                    jsonp：JSONP格式。使用SONP形式调用函数时，例如myurl?callback=?，JQuery将自动替换后一个“?”为正确的函数名，以执行回调函数。
+                    text：返回纯文本字符串。
+                */
+                url: "http://localhost:8080/essay/addEssay",//url
+                data: $('#formEssay').serialize(),//这个是form表单中的id   jQuery的serialize()方法通过序列化表单值
+                success: function (result) {
+                    alert("成功")
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function(s,s2,s3) {
+                    //数据成功传到后台 也有返回值 但就是报错 parsererror ：参考
+                    https://blog.csdn.net/AinGates/article/details/75250223 /
+                            /*
+                                写了一个ajax方法，后台一切正常，通过浏览器的F12工具查看XMLHttpRequest.status返回200，XMLHttpRequest.readyState返回4，也都没有问题。但是回调函数跳到error里，报parsererror的错误。经过排查，发现是因为后台返回时用了@ResponseBody注解（SpringMVC返回json格式的注解），但前台ajax提交没有定义dataType属性（定义服务器返回的数据类型）
+
+                                还有一种情况是ajax方法中定义了 dataType:"json"属性，就一定要返回标准格式的json字符串，要不jQuery1.4+以上版本会报错的，因为不是用eval生成对象了，用的JSON.parse，如果字符串不标准就会报错。比如只返回一个简单的字符串“success”，“fail”， true，false，并不是标准的json字符串就会报错。
+
+                                       首先，jQuery 1.4版本之后对服务端返回的JSON 数据要求比较严格，必须严格按照JSON的标准来了。
+                            */
+
+                            console.log(s)
+                    console.log(s2)
+                    console.log(s3)
+
+                    alert("异常！");
+                }
+            });
+        }
     </script>
 
     <title>用户列表</title>
 </head>
 
 
-
-<!--    <b th:text="${keywordData}"/>-->
-<!--<form action="/user/userlist/keyword" method="post">-->
-<!--    First name:<br>-->
-<!--    <input type="text" name="text" value="text">    <br>-->
-<!--    <input type="submit" value="Submit">-->
-<!--</form>-->
 <body>
 <div class="page">
     <!-- Main Navbar-->
@@ -178,25 +238,20 @@
             <!-- Sidebar Navidation Menus-->
             <span class="heading">菜单</span>
             <ul class="list-unstyled">
-                <li class="active"><a href=""> <i class="icon-home"></i>文章关键词识别</a></li>
-                <li><a onclick="queryEssayAll()"> <i class="icon-grid"></i>查询文章</a></li>
+
+                <li><a onclick="ajaxPage(this)" id="a_1">文章录入</a></li>
+<!--                <li><a href="essay/add"> <i class="fa fa-bar-chart"></i>文章录入</a></li>-->
+                <li class="active"><a href="" id="a_2"> <i class="icon-home"></i>文章关键词识别</a></li>
+                <li><a onclick="queryEssayAll()" id="a_3"> <i class="icon-grid"></i>查询文章</a></li>
 <!--                <li><a href="/essay"> <i class="icon-grid"></i>查询文章</a></li>-->
-                <li><a href="essay/add"> <i class="fa fa-bar-chart"></i>文章录入</a></li>
-                <li><a href="forms.html"> <i class="icon-padnote"></i>填写内容</a></li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>一级菜单</a>
-                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                        <li><a href="#">二级表单1</a></li>
-                        <li><a href="#">二级表单2</a></li>
-                        <li><a href="#">二级表单3</a></li>
-                    </ul>
-                </li>
+
             </ul>
 
         </nav>
         <div class="content-inner" style="padding-bottom: 78.4px" id="showContent">
             <header class="page-header">
                 <div class="container-fluid">
-                    <h2 class="no-margin-bottom">提取关键词</h2>
+                    <h2 class="no-margin-bottom" id="labelId">提取关键词</h2>
                 </div>
             </header>
             <div id="tableInfo1" class="table table-striped">
@@ -208,9 +263,9 @@
                     <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%" onclick="extract()">提取</button>
                 </div>
             </div>
-                <div div id="tableInfo3" class="table table-hover">
+                <div div id="tableInfo3">
                 </div>
-                </div>
+            </div>
 
                 <div id="tableInfo2" >
                     <table id="mytable"></table>
@@ -219,24 +274,13 @@
         </div>
     </div>
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+<div class="modal"  id="mymodal" >
+    <div class="modal-dialog" >
+        <div class="modal-content" >
+            <!-- 模态弹出窗内容 -->
         </div>
     </div>
 </div>
 </div>
-
 </body>
 </html>

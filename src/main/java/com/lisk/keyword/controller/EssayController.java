@@ -99,10 +99,20 @@ public class EssayController {
     public List<Essay> findAll(){
         return essayService.findAll();
     }
-    @GetMapping(value = "/add")
+        @GetMapping(value = "/essay/add")
     public String addEssay(){
-        return "essay/";
+        return "essay/add";
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/essay/addEssay" ,method=RequestMethod.POST)
+    public String add(String title,String textContent){
+        Essay essay = new Essay();
+        System.out.println(title+textContent);
+        essay.setTitle(title);
+        essay.setTextContent(textContent);
+        essayService.insert(essay);
+        return "sesses";
+    }
 
 }
