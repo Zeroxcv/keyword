@@ -21,8 +21,10 @@ public class Ltp {
 
 
 	private static final String TYPE = "dependent";
-	
 
+	/**
+	 * 封装数据
+	 */
 	public static String getLtpData(String text)throws UnsupportedEncodingException{
 		System.out.println(text.length());
 		Map<String, String> header = Ltp.buildHttpHeader();

@@ -24,6 +24,9 @@
     <link rel="shortcut icon" th:href="@{/img/favicon.ico}">
     <link rel="stylesheet" th:href="@{/css/index.css}">
 
+
+
+
     <script th:src="@{/vendor/jquery/jquery-3.4.1.js}"></script>
     <script th:src="@{/bootstrap-table-master/dist/bootstrap-table.js}"></script>
     <script th:src="@{/vendor/popper/popper.min.js}"></script>
@@ -62,18 +65,21 @@
         }
         //左侧不同的标签更改成响应的页面
         function ajaxPage(data){
+            //修改便签名称
             var labelId = document.getElementById('labelId');
             temporary = data.innerHTML;
-             labelId.innerHTML = temporary;
+            labelId.innerHTML = temporary;
             var tableInfos = document.getElementById('tableInfo1');
             tableInfos.innerHTML = "";
+            $('#selectFrom').hide();
+            $('#tableInfo2').hide();
             if(temporary =="文章录入"){
                 $.get("/essay/add",function(data,status){
                     // tableInfos = document.getElementById('tableInfo1');
 
                     tableInfos.innerHTML = data.toString();
                 });
-                
+
             }
             else if(temporary == "文章关键词识别" ){
                 alert("文章关键词识别");
@@ -83,9 +89,15 @@
             }
 
         }
-        function queryEssayAll() {
+        function queryEssayAll(data) {
+            var labelId = document.getElementById('labelId');
+            temporary = data.innerHTML;
+            labelId.innerHTML = temporary;
             var tableInfos = document.getElementById('tableInfo1');
             tableInfos.innerHTML = "";
+            $('#selectFrom').show();
+            $('#tableInfo2').show();
+
             //隐藏div的内容
             //tableInfos.style.visibility = "hidden";
             $("#mytable").bootstrapTable({
@@ -124,14 +136,14 @@
                     }
                 },{
                     title : '文章发布日期',
-                    field : 'publishedData',
+                    field : 'publishedDate',
                     sortable : true
                 },{
                     title : '文章来源',
                     field : 'dataSources',
                     sortable : true
                 },{
-                    title: '操作    <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">添加文章</a>',
+                    title: '操作',
                     field: 'publicationTime',
                     formatter: operation,//对资源进行操作
 
@@ -140,10 +152,14 @@
         }
         function operation(value, row, index) {
             var htm = "<a href='/delete_one?bookName=" + row["bookName"] + "'>删除</a> " +
-                "<a href='/modify_one.xhtml?bookName=" + row["bookName"] + "'>修改</a>"
+                "<a href=''>修改</a>"
             return htm;
         }
+
         function addEssay() {
+            var title = document.getElementById("title").value;
+            var textContent = document.getElementById("textContent").value;
+            if(title !="" && textContent!=""){
             $.ajax({
                 //几个参数需要注意一下
                 type: "POST",//方法类型
@@ -161,8 +177,7 @@
                 url: "http://localhost:8080/essay/addEssay",//url
                 data: $('#formEssay').serialize(),//这个是form表单中的id   jQuery的serialize()方法通过序列化表单值
                 success: function (result) {
-                    alert("成功")
-                    console.log(result);//打印服务端返回的数据(调试用)
+                    alert("成功");
                     if (result.resultCode == 200) {
                         alert("SUCCESS");
                     }
@@ -171,13 +186,6 @@
                 error : function(s,s2,s3) {
                     //数据成功传到后台 也有返回值 但就是报错 parsererror ：参考
                     https://blog.csdn.net/AinGates/article/details/75250223 /
-                            /*
-                                写了一个ajax方法，后台一切正常，通过浏览器的F12工具查看XMLHttpRequest.status返回200，XMLHttpRequest.readyState返回4，也都没有问题。但是回调函数跳到error里，报parsererror的错误。经过排查，发现是因为后台返回时用了@ResponseBody注解（SpringMVC返回json格式的注解），但前台ajax提交没有定义dataType属性（定义服务器返回的数据类型）
-
-                                还有一种情况是ajax方法中定义了 dataType:"json"属性，就一定要返回标准格式的json字符串，要不jQuery1.4+以上版本会报错的，因为不是用eval生成对象了，用的JSON.parse，如果字符串不标准就会报错。比如只返回一个简单的字符串“success”，“fail”， true，false，并不是标准的json字符串就会报错。
-
-                                       首先，jQuery 1.4版本之后对服务端返回的JSON 数据要求比较严格，必须严格按照JSON的标准来了。
-                            */
 
                             console.log(s)
                     console.log(s2)
@@ -186,7 +194,78 @@
                     alert("异常！");
                 }
             });
+            }
+            else {
+                alert("请将信息补全！");
+            }
         }
+
+        function queryContent(){
+            $.ajax({
+                //几个参数需要注意一下
+                type: "GET",//方法类型
+                dataType: "text",//预期服务器返回的数据类型 如果是对象返回的是json 如果是字符串这里一定要定义text 之前我就是定义json 结果字符串的返回一直到额error中去
+
+                url: "http://localhost:8080/essay/queryContent",//url
+                data: $('#selectForm').serialize(),//这个是form表单中的id   jQuery的serialize()方法通过序列化表单值
+                success: function (result) {
+                    alert("成功")
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    alert("数据: \n" + result);
+                    var tableInfos = document.getElementById('tableInfo2');
+                    tableInfos.innerHTML = "";
+                    var jsonobj= eval('(' + result + ')');
+                    var code = '<TABLE  class="table table-striped">';
+                    code += '<TR>' +
+                                '<TH >编号</TH>' +
+                                '<TH >文章标签</TH>'   +
+                                '<TH >文章标题</TH>'   +
+                                '<TH >文章内容</TH>'   +
+                                '<TH >文章发布时间</TH>'   +
+                                '<TH >来源</TH>'   +
+                                '<TH>操作</TH>'   +
+                            '</TR>';
+                    for(var i=0;i<jsonobj.length;i++){
+                        // code += '<TR>' +
+                        //             '<TD>'+jsonobj[i].id+'</TD>' +
+                        //             '<TD>'+jsonobj[i].textLabel+'</TD>' +
+                        //     '<TD>'+jsonobj[i].title+'</TD>' +
+                        //     '<TD>'+jsonobj[i].textContent+'</TD>' +
+                        //     '<TD>'+jsonobj[i].publishedDate+'</TD>' +
+                        //     '<TD>'+jsonobj[i].dataSources+'</TD>' +
+                        //     '<TD>'+jsonobj[i].publicationTime+'</TD>' +
+                        //         '</TR>';
+                        var str = jsonobj[i].textContent;
+                        if(jsonobj[i].textContent.length > 50){
+                            str = jsonobj[i].textContent.substring(0,50)+ "...";
+                        }
+                        code += '<TR>' +
+                                    '<TD>'+jsonobj[i].id+'</TD>' +
+                                    '<TD>'+jsonobj[i].textLabel+'</TD>' +
+                                    '<TD style="width: 300px">'+jsonobj[i].title+'</TD>' +
+                                    '<TD style="width: 400px">'+str+'</TD>' +
+                                    '<TD>'+jsonobj[i].publishedDate+'</TD>' +
+                                    '<TD>'+jsonobj[i].dataSources+'</TD>' +
+                                '</TR>';
+                    }
+                    tableInfos.innerHTML = code + '</TABLE>';
+                },
+                error : function(s,s2,s3) {
+                    //数据成功传到后台 也有返回值 但就是报错 parsererror ：参考
+                    https://blog.csdn.net/AinGates/article/details/75250223 /
+
+                        console.log(s)
+                    console.log(s2)
+                    console.log(s3)
+
+                    alert("异常！");
+                }
+            });
+
+
+        }
+        
+
     </script>
 
     <title>用户列表</title>
@@ -235,15 +314,13 @@
                     <h1 class="h4">姓名</h1>
                 </div>
             </div>
-            <!-- Sidebar Navidation Menus-->
+            <!-- 左侧菜单栏-->
             <span class="heading">菜单</span>
             <ul class="list-unstyled">
 
-                <li><a onclick="ajaxPage(this)" id="a_1">文章录入</a></li>
-<!--                <li><a href="essay/add"> <i class="fa fa-bar-chart"></i>文章录入</a></li>-->
-                <li class="active"><a href="" id="a_2"> <i class="icon-home"></i>文章关键词识别</a></li>
-                <li><a onclick="queryEssayAll()" id="a_3"> <i class="icon-grid"></i>查询文章</a></li>
-<!--                <li><a href="/essay"> <i class="icon-grid"></i>查询文章</a></li>-->
+                <li><a onclick="ajaxPage(this)" id="a_1" class="">文章录入</a></li>
+                <li class="active"><a href="" id="a_2">文章关键词识别</a></li>
+                <li><a onclick="queryEssayAll(this)" id="a_3" class="">查询文章</a></li>
 
             </ul>
 
@@ -254,7 +331,37 @@
                     <h2 class="no-margin-bottom" id="labelId">提取关键词</h2>
                 </div>
             </header>
+            <div id="selectFrom" style="display:none">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-close">
+                            <div class="dropdown">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-inline" id="selectForm">
+                                <div class="form-group">
+                                    <label for="selectContent" class="sr-only">输入查询内容</label>
+                                    <input id="selectContent" name="selectContent" type="text" placeholder="输入查询内容" class="mr-3 form-control">
+                                </div>
+                                <label class="col-sm-2 form-control-label">选择搜索内容：</label>
+                                <div class="col-sm-5">
+                                    <select id="selectRange" name="selectRange"class="col-sm-5">
+                                        <option>关键词</option>
+                                        <option>全文</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+<!--                                    <button type="button" class="btn btn-primary" onclick="selectContent()">查询</button>-->
+                                    <input type="button" value="查询" class="btn btn-primary" onclick="queryContent()">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="tableInfo1" class="table table-striped">
+                <br>
             <div style="padding: 10px 10px 10px 10px">
                 <div style="padding: 10px 10px 10px 10px">
                     <textarea class="form-control" rows="8" id="t1" ></textarea>
@@ -270,17 +377,28 @@
                 <div id="tableInfo2" >
                     <table id="mytable"></table>
                 </div>
+<!--            <div id="table2">-->
+<!--                <table-->
+<!--                        data-toggle="table"-->
+<!--                        data-url="http://localhost:8080/essay/findAll"-->
+<!--                        data-pagination="true"-->
+<!--                        data-search="true"-->
+<!--                        datapagesize="5">-->
+<!--                    <thead>-->
+<!--                    <tr>-->
+<!--                        <th data-field="id">编号</th>-->
+<!--                        <th data-field="textLabel">文章标签</th>-->
+<!--                        <th data-field="title">文章标题</th>-->
+<!--                        <th data-field="textContent" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 150px;"></th>-->
+<!--                        <th data-field="pub lishedDate">文章发布日期</th>-->
+<!--                        <th data-field="dataSources">文章来源</th>-->
+<!--                    </tr>-->
+<!--                    </thead>-->
+<!--                </table>-->
+<!--            </div>-->
             </div>
         </div>
     </div>
-<!-- Modal -->
-<div class="modal"  id="mymodal" >
-    <div class="modal-dialog" >
-        <div class="modal-content" >
-            <!-- 模态弹出窗内容 -->
-        </div>
-    </div>
-</div>
 </div>
 </body>
 </html>

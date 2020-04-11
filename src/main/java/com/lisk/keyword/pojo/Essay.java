@@ -3,7 +3,10 @@ package com.lisk.keyword.pojo;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 @TableName(value = "t_pdarticle")
 public class Essay {
@@ -17,14 +20,18 @@ public class Essay {
     //文章内容
     String textContent;
     //文章发布日期
-    Date publishedData;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+
+    Date PublishedDate;
     //文章来源
     String dataSources;
 
+
     public Essay() {
+
     }
 
-    public Essay(int id, String textLabel, String title, String textContent, Date publishedData, String dataSources) {
+    public Essay(int id, String textLabel, String title, String textContent, Date PublishedDate, String dataSources) {
         //文章id
         this.id = id;
         //文章标题
@@ -32,7 +39,7 @@ public class Essay {
         //文章标题
         this.title = title;
         this.textContent = textContent;
-        this.publishedData = publishedData;
+        this.PublishedDate = PublishedDate;
         this.dataSources = dataSources;
     }
 
@@ -68,12 +75,12 @@ public class Essay {
         this.textContent = textContent;
     }
 
-    public Date getPublishedData() {
-        return publishedData;
+    public Date getPublishedDate() {
+        return PublishedDate;
     }
 
-    public void setPublishedData(Date publishedData) {
-        this.publishedData = publishedData;
+    public void setPublishedDate(Date PublishedDate) {
+        this.PublishedDate = PublishedDate;
     }
 
     public String getDataSources() {
@@ -91,7 +98,7 @@ public class Essay {
                 ", textLabel='" + textLabel + '\'' +
                 ", title='" + title + '\'' +
                 ", textContent='" + textContent + '\'' +
-                ", publishedData=" + publishedData +
+                ", PublishedDate=" + PublishedDate +
                 ", dataSources='" + dataSources + '\'' +
                 '}';
     }

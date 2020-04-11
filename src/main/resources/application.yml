@@ -10,10 +10,12 @@ spring:
     encoding: UTF-8
     cache: false
     mode: html5
+  jackson:
+    time-zone: Asia/Shanghai
 
   #数据库连接配置
   datasource:
-    url: jdbc:mysql://localhost:3306/keyword?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/keyword?serverTimezone=Asia/Shanghai
     username: root
     password: 123
     # password: Admin123!

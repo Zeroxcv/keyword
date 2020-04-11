@@ -11,6 +11,12 @@
 
     </select>
     <select id="findAll" resultType="com.lisk.keyword.pojo.Essay">
-        select * from t_pdarticle
+select id,text_label,title,text_content , published_date,data_sources,tabel_number,state from t_pdarticle    </select>
+    <select id="queryAllByLabel" resultType="com.lisk.keyword.pojo.Essay">
+        select c.id id,c.text_label text_label,c.title title,c.text_content text_content,c.published_date published_date, c.data_sources data_sources
+        from t_pdarticle_label a
+        left join t_label b on a.label_id = b.id
+        left join t_pdarticle c on a.pdarticle_id = c.id
+        where b.label_name like CONCAT('%',#{label},'%')
     </select>
 </mapper>
