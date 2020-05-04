@@ -6,5 +6,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface LabelMapper extends BaseMapper<Label> {
-    Boolean insertPdarticleLabel(int labelId, int essayId);
+    Boolean insertPdarticleLabel(int labelId, int essayId,double score);
 }

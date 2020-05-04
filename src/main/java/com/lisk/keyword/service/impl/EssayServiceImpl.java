@@ -31,5 +31,15 @@ public class EssayServiceImpl extends ServiceImpl<EssayMapper, Essay> implements
         return essayMapper.queryAllByLabel(label);
     }
 
+    @Override
+    public Integer getTotal(Essay essay) {
+        return essayMapper.getTotal(essay);
+    }
+
+    @Override
+    public List<Essay> getEssayListPage(Essay essay) {
+        return essayMapper.getEssayListPage(essay);
+    }
+
 
 }

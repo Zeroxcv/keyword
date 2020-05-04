@@ -25,15 +25,166 @@
     <link rel="stylesheet" th:href="@{/css/index.css}">
 
 
+    <style type="text/css">
+        body{
+            margin: 0px;
+        }
+        .zhezhao{
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            background: #000;
+            width: 100%;
+            height: 100%;
+            opacity: 0.9;
+        }
+        .tankuang{
+            opacity: 1;
+            position: relative;
+            background: #fff;
+            top: 10%;
+            width: 50%;
+            height: 60%;
+            border-radius: 5px;
+            margin: 5% auto;
+        }
+        #header{
+            height: 40px;
+        }
+        #header-right{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: red;
+            color: #fff;
+            right: 20px;
+            top: 5px;
+            text-align: center;
+        }
+        .child{
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            bottom:0;  //left,top,right,bottom都为0，充满真个页面
+        overflow-y:auto;
+            overflow-x:hidden; //设置Y轴出现滚动条，X轴隐藏
+        }
 
-
+    </style>
     <script th:src="@{/vendor/jquery/jquery-3.4.1.js}"></script>
     <script th:src="@{/bootstrap-table-master/dist/bootstrap-table.js}"></script>
     <script th:src="@{/vendor/popper/popper.min.js}"></script>
     <script th:src="@{/vendor/js/front.js}"></script>
+    <script th:src="@{/js/echarts.min.js}"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
+        var sourceData = new Array();
+        var keywords = new Array();
+        var sourceData2 = new Array();
+        var keywords2 = new Array();
+        option = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                // formatter:'{c0}%',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter:'{a0}:{c0}'+'%'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: keywords ,
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        show: true,
+                        interval: 'auto',
+                        formatter: '{value}%'
+                    },
+                    show: true
 
+                }
+            ],
+            series: [
+                {
+                    name: '权重',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: sourceData
+                }
+            ]
+        };
+        option2 = {
+            color: ['#3398DB'],
+            tooltip: {
+                trigger: 'axis',
+                // formatter:'{c0}%',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter:'{a0}:{c0}'+'%'
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: keywords2 ,
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        show: true,
+                        interval: 'auto',
+                        formatter: '{value}%'
+                    },
+                    show: true
+
+                }
+            ],
+            series: [
+                {
+                    name: '权重',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: sourceData2
+                }
+            ]
+        };
+        //小数点转化成百分比
+        function toPercent(point){
+            if (point==0) {
+                return 0;
+            }
+            var str=Number(point*100).toFixed();
+
+            return str;
+        }
         function extract(){
             var textContent = document.getElementById("t1").value;
             alert(textContent);
@@ -42,16 +193,39 @@
                     text:textContent
                 },
                 function(data,status){
-                    alert("数据: \n" + data + "\n状态: " + status);
-                    var tableInfos = document.getElementById('tableInfo3');
-                    var jsonobj= eval('(' + data + ')');
-                    var code = '<TABLE class="table table-striped">';
-                    code += '<TR><TH>关键词</TH><TH>权重</TH></TR>';
-                    for(var i=0;i<jsonobj.length;i++){
 
-                        code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
+                        var tableInfos =echarts.init( document.getElementById('tableInfo3'));
+                    var tableInfos4 =echarts.init( document.getElementById('tableInfo4'));
+                    var jsonobj= eval('(' + data + ')');
+                    //只要前5个
+                    // jsonobjLength = jsonobj.length > 5 ? 5: jsonobj.length;
+                    jsonobjLength = jsonobj.length;
+                    for(var i=0;i < jsonobjLength;i++){
+                        keywords.push(jsonobj[i].word);
+                        sourceData.push(toPercent(jsonobj[i].score));
                     }
-                    tableInfos.innerHTML = code + '</TABLE>';
+                    tableInfos.clear();
+                    tableInfos.setOption(option);
+
+                    // jsonobjLength = jsonobj.length > 5 ? 5: jsonobj.length;
+                    for(var i=0;i < jsonobjLength;i++){
+                        if(jsonobj[i].score >= 0.560){
+                            keywords2.push(jsonobj[i].word);
+                            sourceData2.push(toPercent(jsonobj[i].score));
+                        }
+
+                    }
+
+                    tableInfos4.setOption(option2);
+                    // var jsonobj= eval('(' + data + ')');
+                    // var code = '<TABLE class="table table-striped">';
+                    // alert(jsonobj);
+                    // code += '<TR><TH>关键词</TH><TH>权重</TH></TR>';
+                    // for(var i=0;i<jsonobj.length;i++){
+                    //
+                    //     code += '<TR><TD>'+jsonobj[i].word+'</TD><TD>'+jsonobj[i].score+'</TD></TR>';
+                    // }
+                    // tableInfos.innerHTML = code + '</TABLE>';
                 });
         }
         function queryPost(){
@@ -87,7 +261,6 @@
             else if( temporary == "查询文章"){
                 alert("查询文章");
             }
-
         }
         function queryEssayAll(data) {
             var labelId = document.getElementById('labelId');
@@ -103,24 +276,43 @@
             $("#mytable").bootstrapTable({
                 url:"/essay/findAll",  //请求地址
                 striped : true, //是否显示行间隔色
+
                 pageNumber : 1, //初始化加载第一页
                 pagination : true,//是否分页
-                sidePagination : 'client',//server:服务器端分页|client：前端分页
+                sidePagination : 'client ',//server:服务器端分页|client：前端分页
                 pageSize : 5,//单页记录数
                 pageList : [ 5, 10],//可选择单页记录数
                 //showRefresh : true,//刷新按钮
+                queryParams : function(params) {//上传服务器的参数
+                    var temp = {//如果是在服务器端实现分页，limit、offset这两个参数是必须的
+                        limit : params.limit, // 每页显示数量
+                        offset : params.offset, // SQL语句起始索引
+                        //page : (params.offset / params.limit) + 1, //当前页码
+                        //
+                        // Name : $('#search_name').val(),
+                        // Tel : $('#search_tel').val()
+                    };
+                    return temp;
+                },
+
                 columns : [ {
                     title : '编号',
                     field : 'id',
                     sortable : true
                 }, {
                     title : '文章标签',
-                    field : 'textLabel',
-                    sortable : true
+                    field : 'textLabel'
                 }, {
                     title : '文章标题',
                     field : 'title',
-                    sortable : true
+                    cellStyle:{
+                        css:{
+                            "overflow": "hidden",
+                            "text-overflow": "ellipsis",
+                            "white-space": "nowrap",
+                            "max-width": "100px"
+                        }
+                    }
                 },{
                     title : '文章内容',
                     field : 'textContent',
@@ -130,7 +322,7 @@
                             "overflow": "hidden",
                             "text-overflow": "ellipsis",
                             "white-space": "nowrap",
-                            "max-width": "150px"
+                            "max-width": "500px"
                             // "text-overflow：" : "ellipsis"
                         }
                     }
@@ -138,16 +330,23 @@
                     title : '文章发布日期',
                     field : 'publishedDate',
                     sortable : true
-                },{
-                    title : '文章来源',
-                    field : 'dataSources',
-                    sortable : true
-                },{
+                }
+                ,{
                     title: '操作',
-                    field: 'publicationTime',
-                    formatter: operation,//对资源进行操作
-
-                }]
+                    // formatter: operation,//对资源进行操作
+                    formatter: function () {
+                        return '<button type="button" id="btn1">详情</button>'
+                    },
+                    events:{
+                        "click #btn1":function (ev,value,row,index) {
+                            document.getElementById('zhezhao').style.display="";
+                            document.getElementById('t4').innerHTML = row.id;
+                            document.getElementById('t2').innerHTML = row.title;
+                            document.getElementById('t3').innerHTML = row.textContent;
+                        }
+                    }
+                }
+                ]
             })
         }
         function operation(value, row, index) {
@@ -200,74 +399,44 @@
             }
         }
 
-        function queryContent(){
-            $.ajax({
-                //几个参数需要注意一下
-                type: "GET",//方法类型
-                dataType: "text",//预期服务器返回的数据类型 如果是对象返回的是json 如果是字符串这里一定要定义text 之前我就是定义json 结果字符串的返回一直到额error中去
+ 0000000
+    function selectParams(params) {
+        params.selectContent = $('#selectContent').value.serialize();
+        params.selectRange = $('#selectRange').value.serialize();
+        return params;
+    }
+    function ajaxRequest(params) {
 
-                url: "http://localhost:8080/essay/queryContent",//url
-                data: $('#selectForm').serialize(),//这个是form表单中的id   jQuery的serialize()方法通过序列化表单值
-                success: function (result) {
-                    alert("成功")
-                    console.log(result);//打印服务端返回的数据(调试用)
-                    alert("数据: \n" + result);
-                    var tableInfos = document.getElementById('tableInfo2');
-                    tableInfos.innerHTML = "";
-                    var jsonobj= eval('(' + result + ')');
-                    var code = '<TABLE  class="table table-striped">';
-                    code += '<TR>' +
-                                '<TH >编号</TH>' +
-                                '<TH >文章标签</TH>'   +
-                                '<TH >文章标题</TH>'   +
-                                '<TH >文章内容</TH>'   +
-                                '<TH >文章发布时间</TH>'   +
-                                '<TH >来源</TH>'   +
-                                '<TH>操作</TH>'   +
-                            '</TR>';
-                    for(var i=0;i<jsonobj.length;i++){
-                        // code += '<TR>' +
-                        //             '<TD>'+jsonobj[i].id+'</TD>' +
-                        //             '<TD>'+jsonobj[i].textLabel+'</TD>' +
-                        //     '<TD>'+jsonobj[i].title+'</TD>' +
-                        //     '<TD>'+jsonobj[i].textContent+'</TD>' +
-                        //     '<TD>'+jsonobj[i].publishedDate+'</TD>' +
-                        //     '<TD>'+jsonobj[i].dataSources+'</TD>' +
-                        //     '<TD>'+jsonobj[i].publicationTime+'</TD>' +
-                        //         '</TR>';
-                        var str = jsonobj[i].textContent;
-                        if(jsonobj[i].textContent.length > 50){
-                            str = jsonobj[i].textContent.substring(0,50)+ "...";
-                        }
-                        code += '<TR>' +
-                                    '<TD>'+jsonobj[i].id+'</TD>' +
-                                    '<TD>'+jsonobj[i].textLabel+'</TD>' +
-                                    '<TD style="width: 300px">'+jsonobj[i].title+'</TD>' +
-                                    '<TD style="width: 400px">'+str+'</TD>' +
-                                    '<TD>'+jsonobj[i].publishedDate+'</TD>' +
-                                    '<TD>'+jsonobj[i].dataSources+'</TD>' +
-                                '</TR>';
-                    }
-                    tableInfos.innerHTML = code + '</TABLE>';
-                },
-                error : function(s,s2,s3) {
-                    //数据成功传到后台 也有返回值 但就是报错 parsererror ：参考
-                    https://blog.csdn.net/AinGates/article/details/75250223 /
+        $.ajax({
+            type: "POST",//方法类型
+            // dataType: "json",
+            // data:JSON.stringify(params.data),//预期服务器返回的数据类型 如果是对象返回的是json 如果是字符串这里一定要定义text 之前我就是定义json 结果字符串的返回一直到额error中去
+            url: "/essay/queryContent",//url
+             data: $('#selectForm').serializeArray(),//这个是form表单中的id   jQuery的serialize()方法通过序列化表单值
+            success: function (res) {
 
-                        console.log(s)
-                    console.log(s2)
-                    console.log(s3)
+                // params.success({
+                //     row:res,
+                // });
+                // $('#mytable').bootstrapTable('load', res);
+                // $('#mytable').bootstrapTable('destroy');
+                $('#mytable').bootstrapTable('load', res);
+                // $dataTableHot.bootstrapTable('refresh');
+            },error : function (s,s2,s3) {
 
-                    alert("异常！");
-                }
-            });
-
-
-        }
-        
+            }
+        });
+    }
+    function openModal() {
+        $('#myModal').modal('show');
+    }
 
     </script>
-
+    <script type="text/javascript">
+        function hidder(){
+            document.getElementById('zhezhao').style.display="none";
+        }
+    </script>
     <title>用户列表</title>
 </head>
 
@@ -339,7 +508,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form class="form-inline" id="selectForm">
+                            <form class="form-inline" id="selectForm" method="post">
                                 <div class="form-group">
                                     <label for="selectContent" class="sr-only">输入查询内容</label>
                                     <input id="selectContent" name="selectContent" type="text" placeholder="输入查询内容" class="mr-3 form-control">
@@ -353,7 +522,7 @@
                                 </div>
                                 <div class="form-group">
 <!--                                    <button type="button" class="btn btn-primary" onclick="selectContent()">查询</button>-->
-                                    <input type="button" value="查询" class="btn btn-primary" onclick="queryContent()">
+                                    <input type="button" value="查询" class="btn btn-primary" onclick="ajaxRequest()">
                                 </div>
                             </form>
                         </div>
@@ -370,35 +539,63 @@
                     <button  class="btn btn-primary btn-lg" id="b1" style="text-align:center;margin-left: 50%;margin-right: 50%" onclick="extract()">提取</button>
                 </div>
             </div>
-                <div div id="tableInfo3">
+                <div div id="tableInfo3" style="width: 800px;height:400px;margin :0 auto;">
                 </div>
+                <div div id="tableInfo4" style="width: 800px;height:400px;margin :0 auto;"/>
             </div>
 
                 <div id="tableInfo2" >
                     <table id="mytable"></table>
                 </div>
-<!--            <div id="table2">-->
-<!--                <table-->
-<!--                        data-toggle="table"-->
-<!--                        data-url="http://localhost:8080/essay/findAll"-->
-<!--                        data-pagination="true"-->
-<!--                        data-search="true"-->
-<!--                        datapagesize="5">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th data-field="id">编号</th>-->
-<!--                        <th data-field="textLabel">文章标签</th>-->
-<!--                        <th data-field="title">文章标题</th>-->
-<!--                        <th data-field="textContent" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;max-width: 150px;"></th>-->
-<!--                        <th data-field="pub lishedDate">文章发布日期</th>-->
-<!--                        <th data-field="dataSources">文章来源</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                </table>-->
-<!--            </div>-->
             </div>
+
         </div>
     </div>
 </div>
+<!--<div class="modal fade" id="myModal" tabindex="-1"  data-backdrop="false" style="display:block;position:absolute;-->
+<!--z-index:9999;" >-->
+<!--    <div class="modal-dialog">-->
+<!--        <div class="modal-content">-->
+<!--            <div class="modal-body">-->
+<!--                在这里添加一些文本-->
+<!--            </div>-->
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">关闭-->
+<!--                </button>-->
+<!--                <button type="button" class="btn btn-primary">-->
+<!--                    提交更改-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="zhezhao" id='zhezhao' style="display: none">
+    <div class="tankuang">
+
+            <div class="child">
+                <div id="header-right" onclick="hidder()">x</div>
+                <div>
+                    <table border="0" style="width: 90%;height: 300px">
+                        <tr>
+                            <th>编号</th>
+                        </tr>
+                        <tr id="t4"></tr>
+                        <tr>
+                            <th>标题</th>
+                        </tr>
+                        <tr id="t2"></tr>
+                        <tr>
+                            <th>内容</th>
+                        </tr>
+                        <tr id="t3" style="height: 300px;overflow:auto"></tr>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+
+
+
+
 </body>
 </html>

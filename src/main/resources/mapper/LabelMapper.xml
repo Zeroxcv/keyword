@@ -24,6 +24,6 @@
 <!--        where b.label_name like CONCAT('%',#{label},'%')-->
 <!--    </select>-->
     <insert id="insertPdarticleLabel" >
-        insert into t_pdarticle_label (label_id,pdarticle_id) value (#{labelId},#{essayId})
+        insert into t_pdarticle_label (label_id,pdarticle_id,score) value (#{labelId},#{essayId},#{score})
     </insert>
 </mapper>

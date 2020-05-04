@@ -7,22 +7,17 @@ import com.lisk.keyword.pojo.Label;
 import com.lisk.keyword.repository.UserRepository;
 import com.lisk.keyword.service.EssayService;
 import com.lisk.keyword.service.LabelService;
-import com.lisk.keyword.service.UserService;
 import com.lisk.keyword.util.Ltp;
 import com.lisk.keyword.util.Page;
+import com.lisk.keyword.util.ReturnData;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import org.apache.ibatis.jdbc.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
-
-import javax.xml.crypto.dsig.spec.ExcC14NParameterSpec;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -69,7 +64,7 @@ public class EssayController {
             System.out.println("success");
             JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("ke");
             for(int i = 0; i < jsonArray.size(); i++){
-                System.out.println(jsonArray.getJSONObject(i).getString("word"));
+                System.out.println(jsonArray.getJSONObject(i).getString("word") + "\n" +jsonArray.getJSONObject(i).getString("score"));
             }
             //返回JSON数据
             return JSONObject.fromObject(jsonObject.getString("data")).getString("ke");
@@ -86,33 +81,38 @@ public class EssayController {
     }
 
     //分页查询文章
-    @ResponseBody
-    @RequestMapping(value = "/essay/list/{start}" ,method=RequestMethod.GET)
-    public Map listEssays(@PathVariable("start")Integer start){
-        Page page = new Page();
-        start = start * 10 ;
-        page.setStart(start);
-        page.setCount(Page.getDefaultCount());
-        List<Essay> list;
-
-        list = essayService.listEssays(page);
-        Map map = new HashMap<>();
-        map.put("list",list);
-        map.put("page",page);
-        return map;
-    }
+//    @ResponseBody
+//    @RequestMapping(value = "/essay/list/{start}" ,method=RequestMethod.GET)
+//    public Map listEssays(@PathVariable("start")Integer start){
+//        Page page = new Page();
+//        start = start * 10 ;
+//        page.setStart(start);
+//        page.setCount(Page.getDefaultCount());
+//        List<Essay> list;
+//
+//        list = essayService.listEssays(page);
+//        Map map = new HashMap<>();
+//        map.put("list",list);
+//        map.put("page",page);
+//        return map;
+//    }
     @RequestMapping(value = "/extractSearch",method = RequestMethod.GET)
     public ModelAndView extractSearch(Model model){
         return  new ModelAndView("essay/extractSearch","essayModel",model);
     }
     @ResponseBody
     @RequestMapping(value = "/essay/findAll" ,method=RequestMethod.GET)
-    public List<Essay> findAll()throws Exception{
-        List<Essay> list = essayService.findAll();
-//        DataConversion(list);
-        return list;
+    public ReturnData findAll(Essay essay)throws Exception{
+        ReturnData data = new ReturnData();
+        List<Essay> list2 = essayService.findAll();
+        data.setTotal(essayService.getTotal(essay));
+        List<Essay> list = essayService.getEssayListPage(essay);
+        data.setRows(list2);
+//        DataConversion(list2);
+        return data;
 
     }
+    //批量转化成关键词
     @Transactional
     public void DataConversion(List<Essay> list){
         for(int i = 0;i < list.size();i++){
@@ -120,8 +120,6 @@ public class EssayController {
             String eText = essay.getTextContent().replaceAll("\n","");
 
             try {
-
-
             String keywordData = Ltp.getLtpData(eText);
             if(keywordData.isEmpty())
                     break;
@@ -130,27 +128,32 @@ public class EssayController {
                 if(jsonObject.isEmpty())
                 break;
                 JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("ke");
-                for(int j = 0; j < jsonArray.size(); j++){
-                    Label label = new Label();
-                    label.setPdarticleId(essay.getId());
-                    label.setLabelName(jsonArray.getJSONObject(j).getString("word"));
-                    EntityWrapper ew = new EntityWrapper();
-                    ew.setSqlSelect("id,label_name,pdarticle_id");
-                    ew.eq("label_name",label.getLabelName());
-                    List<Label> labelLists = labelService.selectList(ew);
-                    if(labelLists.size() > 0){
 
-                        for(int k = 0;k < labelLists.size() ;k++){
-                            //关系表
-                            labelService.insertPdarticleLabel(labelLists.get(k).getId(),essay.getId());
+                //只要前5个关键词
+                int jsonobjLength = jsonArray.size() > 5 ? 5: jsonArray.size();
+                for(int j = 0; j < jsonobjLength; j++){
+                    if(Double.valueOf(jsonArray.getJSONObject(j).getString("score")) >= 0.560){
+                        Label label = new Label();
+                        label.setPdarticleId(essay.getId());
+                        label.setLabelName(jsonArray.getJSONObject(j).getString("word"));
+                        double score = Double.valueOf(jsonArray.getJSONObject(j).getString("score"));
+                        System.out.println(i);
+                        EntityWrapper ew = new EntityWrapper();
+                        ew.setSqlSelect("id,label_name,pdarticle_id");
+                        ew.eq("label_name",label.getLabelName());
+                        List<Label> labelLists = labelService.selectList(ew);
+                        if(labelLists.size() > 0){
+                            for(int k = 0;k < labelLists.size() ;k++){
+                                //关系表
+                                labelService.insertPdarticleLabel(labelLists.get(k).getId(),essay.getId(),score);
+                            }
+                        }
+                        else {
+                            labelService.insert(label);
+                                //关系表
+                            labelService.insertPdarticleLabel(label.getId(),essay.getId(),score);
                         }
                     }
-                    else {
-                        labelService.insert(label);
-                            //关系表
-                            labelService.insertPdarticleLabel(label.getId(),essay.getId());
-                    }
-
                 }            }
             catch (Exception e){
             }
@@ -199,7 +202,7 @@ public class EssayController {
                     Label label = new Label();
                     label.setLabelName(jsonArray.getJSONObject(i).getString("word"));
                     label.setPdarticleId((essay.getId()));
-
+                    float score = Float.valueOf(jsonArray.getJSONObject(i).getString("score"));
                     EntityWrapper ew = new EntityWrapper();
                     ew.setSqlSelect("id,label_name,pdarticle_id");
                     ew.eq("label_name",label.getLabelName());
@@ -207,10 +210,10 @@ public class EssayController {
                     List<Label> labelList = labelService.selectList(ew);
                     if(labelList.size() == 0){
                         labelService.insert(label);
-                        labelService.insertPdarticleLabel(label.getId(),essay.getId());
+                        labelService.insertPdarticleLabel(label.getId(),essay.getId(),score);
                     }
                     else{
-                        labelService.insertPdarticleLabel(labelList.get(0).getId(),essay.getId());
+                        labelService.insertPdarticleLabel(labelList.get(0).getId(),essay.getId(),score);
                     }
 
 
@@ -227,8 +230,10 @@ public class EssayController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/essay/queryContent",method = RequestMethod.GET)
-    public List<Essay> queryContent(String selectRange,String selectContent) {
+    @RequestMapping(value = "/essay/queryContent" ,method=RequestMethod.POST)
+//    public List<Essay> queryContent(String sortName, String sortOrder, Integer pageNumber, Integer pageSize,String selectRange,String selectContent) {
+
+    public List<Essay> queryContent(String sortName, String sortOrder, Integer pageNumber, Integer pageSize,String selectRange,String selectContent) {
 
         if ("全文".equals(selectRange)) {
             EntityWrapper ew = new EntityWrapper();
@@ -240,10 +245,17 @@ public class EssayController {
         }
         if ("关键词".equals(selectRange)) {
             List<Essay> list = essayService.queryAllByLabel(selectContent);
+
+            JSONArray json = JSONArray.fromObject(list);
+            System.out.println(json.toString());
             return list;
             }
         return null;
         }
 
+    public String conutEssay(){
+
+        return null;
+    }
 
 }

@@ -14,7 +14,7 @@ import java.io.UnsupportedEncodingException;
 public class ConsumerController {
     @RequestMapping(value = "consumer/keyword" ,method= RequestMethod.POST)
     public String getKeyword(@RequestParam("text")String text) throws UnsupportedEncodingException {
-        System.out.println(text);
+//        System.out.println(text);
         String keywordData;
         keywordData = Ltp.getLtpData(new String(text));
 //        JSONArray jsonArray = JSONArray.fromObject(keywordData);
@@ -26,7 +26,8 @@ public class ConsumerController {
         System.out.println(jsonObject.getString("data"));
         JSONArray jsonArray = JSONArray.fromObject(JSONObject.fromObject(jsonObject.getString("data")).getString("ke"));
         for(int i = 0; i < jsonArray.size(); i++){
-            System.out.println(jsonArray.getJSONObject(i).getString("word"));
+            System.out.println(jsonArray.getJSONObject(i).getString("word")+" " +jsonArray.getJSONObject(i).getString("score"));
+
         }
         //返回JSON数据
 

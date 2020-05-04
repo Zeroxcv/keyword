@@ -3,13 +3,13 @@ package com.lisk.keyword.pojo;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.lisk.keyword.util.Page;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+
 @TableName(value = "t_pdarticle")
-public class Essay {
+public class Essay extends Page {
     //文章id
     @TableId(type = IdType.AUTO)
     int id;
@@ -26,21 +26,20 @@ public class Essay {
     //文章来源
     String dataSources;
 
+    List<Label> labels;
 
     public Essay() {
 
     }
 
-    public Essay(int id, String textLabel, String title, String textContent, Date PublishedDate, String dataSources) {
-        //文章id
+    public Essay(int id, String textLabel, String title, String textContent, Date publishedDate, String dataSources, List<Label> labels) {
         this.id = id;
-        //文章标题
         this.textLabel = textLabel;
-        //文章标题
         this.title = title;
         this.textContent = textContent;
-        this.PublishedDate = PublishedDate;
+        PublishedDate = publishedDate;
         this.dataSources = dataSources;
+        this.labels = labels;
     }
 
     public int getId() {
@@ -91,6 +90,14 @@ public class Essay {
         this.dataSources = dataSources;
     }
 
+    public List<Label> getLabels() {
+        return labels;
+    }
+
+    public void setLabels(List<Label> labels) {
+        this.labels = labels;
+    }
+
     @Override
     public String toString() {
         return "Essay{" +
@@ -100,6 +107,7 @@ public class Essay {
                 ", textContent='" + textContent + '\'' +
                 ", PublishedDate=" + PublishedDate +
                 ", dataSources='" + dataSources + '\'' +
+                ", labels=" + labels +
                 '}';
     }
 }

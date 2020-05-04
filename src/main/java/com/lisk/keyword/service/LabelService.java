@@ -6,5 +6,5 @@ import com.lisk.keyword.pojo.Label;
 
 public interface LabelService extends IService<Label>{
 
-    Boolean insertPdarticleLabel(int labelId, int EssayId);
+    Boolean insertPdarticleLabel(int labelId, int EssayId,double score);
 }

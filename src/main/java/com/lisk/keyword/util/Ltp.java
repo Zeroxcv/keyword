@@ -26,13 +26,13 @@ public class Ltp {
 	 * 封装数据
 	 */
 	public static String getLtpData(String text)throws UnsupportedEncodingException{
-		System.out.println(text.length());
+//		System.out.println(text.length());
 		Map<String, String> header = Ltp.buildHttpHeader();
 
 		String result = HttpUtil.doPost1(WEBTTS_URL, header, "text=" + URLEncoder.encode(text, "utf-8"));
 		if(null == result)
 			return "error";
-		System.out.println("itp 接口调用结果：" + result);
+//		System.out.println("itp 接口调用结果：" + result);
 		return result;
 	}
 

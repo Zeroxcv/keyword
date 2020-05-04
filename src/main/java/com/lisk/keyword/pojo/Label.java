@@ -19,14 +19,18 @@ public class Label{
     private int pdarticleId;
 
     private List<Essay> essayList;
+
+    private double score ;
+
     public Label() {
     }
 
-    public Label(int id, String labelName, int pdarticleId, List<Essay> essayList) {
+    public Label(int id, String labelName, int pdarticleId, List<Essay> essayList, double score) {
         this.id = id;
         this.labelName = labelName;
         this.pdarticleId = pdarticleId;
         this.essayList = essayList;
+        this.score = score;
     }
 
     public int getId() {
@@ -61,6 +65,14 @@ public class Label{
         this.essayList = essayList;
     }
 
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
+    }
+
     @Override
     public String toString() {
         return "Label{" +
@@ -68,6 +80,7 @@ public class Label{
                 ", labelName='" + labelName + '\'' +
                 ", pdarticleId=" + pdarticleId +
                 ", essayList=" + essayList +
+                ", score=" + score +
                 '}';
     }
 }

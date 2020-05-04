@@ -27,3 +27,4 @@ mybatis-plus:
 logging:
   level:
     com.lisk.keyword.mapper : debug
+
