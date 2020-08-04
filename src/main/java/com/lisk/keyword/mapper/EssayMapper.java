@@ -11,7 +11,9 @@ import java.util.List;
 @Mapper
 public interface EssayMapper extends BaseMapper<Essay> {
     List<Essay> listEssays(Page page);
+
     List<Essay> findAll();
+
     List<Essay> queryAllByLabel(String label);
 
     Integer getTotal(Essay essay);

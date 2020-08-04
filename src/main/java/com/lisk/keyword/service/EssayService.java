@@ -9,8 +9,11 @@ import java.util.List;
 
 public interface EssayService extends IService<Essay> {
     List<Essay> listEssays(Page page);
+
     List<Essay> findAll();
+
     List<Essay> queryAllByLabel(String label);
+
     Integer getTotal(Essay essay);
 
     List<Essay> getEssayListPage(Essay essay);

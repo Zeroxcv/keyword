@@ -16,7 +16,7 @@ public class LabelServiceImpl extends ServiceImpl<LabelMapper, Label> implements
 
 
     @Override
-    public Boolean insertPdarticleLabel(int labelId, int EssayId,double score) {
-        return labelMapper.insertPdarticleLabel(labelId, EssayId,score);
+    public Boolean insertPdarticleLabel(int labelId, int EssayId, double score) {
+        return labelMapper.insertPdarticleLabel(labelId, EssayId, score);
     }
 }

@@ -3,7 +3,7 @@ package com.lisk.keyword.util;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReturnData <T> {
+public class ReturnData<T> {
     //数据集合
     private List<T> rows = new ArrayList<T>();
     //数据总条数

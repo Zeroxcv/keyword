@@ -1,0 +1,2190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7fd77e7b-7031-4e61-b0a9-ce20d56153b2" name="Default Changelist" comment="修复若干个bug，新增查询功能">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generate_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_support_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_theborakompanioni_thymeleaf_extras_shiro_2_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_18_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/KeywordApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/controller/ConsumerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/controller/EssayController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/controller/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/controller/LabelController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/mapper/EssayMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/mapper/LabelMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/pojo/Essay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/pojo/Label.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/pojo/LabelEssay.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/pojo/TableParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/pojo/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/EssayService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/LabelService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/impl/EssayServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/impl/LabelServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/FileUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/HttpUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/Ltp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/MyProps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/ReturnData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/lisk/keyword/util/StaticMath.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/EssayMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/LabelMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.stylelintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/DONATORS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/bootstrap-table.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/deploy.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/deploy_key.enc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-locale-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-locale-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-vue.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-vue.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table-vue.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/bootstrap-table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/addrbar/bootstrap-table-addrbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/addrbar/bootstrap-table-addrbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cookie/bootstrap-table-cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/cookie/bootstrap-table-cookie.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/copy-rows/bootstrap-table-copy-rows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/copy-rows/bootstrap-table-copy-rows.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/defer-url/bootstrap-table-defer-url.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/defer-url/bootstrap-table-defer-url.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/editable/bootstrap-table-editable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/editable/bootstrap-table-editable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/key-events/bootstrap-table-key-events.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/key-events/bootstrap-table-key-events.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/mobile/bootstrap-table-mobile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/mobile/bootstrap-table-mobile.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/pipeline/bootstrap-table-pipeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/pipeline/bootstrap-table-pipeline.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/print/bootstrap-table-print.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/print/bootstrap-table-print.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/resizable/bootstrap-table-resizable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/resizable/bootstrap-table-resizable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/toolbar/bootstrap-table-toolbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/toolbar/bootstrap-table-toolbar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/treegrid/bootstrap-table-treegrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/extensions/treegrid/bootstrap-table-treegrid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-af-ZA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-af-ZA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-ar-SA.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-ar-SA.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-ca-ES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-ca-ES.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-cs-CZ.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-cs-CZ.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-da-DK.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-da-DK.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-de-DE.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-de-DE.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-el-GR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-el-GR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-en-US.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-en-US.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-es-AR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-es-AR.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-es-CL.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/bootstrap-table-master/dist/locale/bootstrap-table-es-CL.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/fontastic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.blue.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.pink.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.red.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.sea.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/css/style.violet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/data/addresses.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/data/countries.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/fonts/dashboard.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/fonts/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/fonts/dashboard.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/fonts/dashboard.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/fonts/dashboard.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/fonts/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/fonts/dashboard.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/fonts/dashboard.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/icons-reference.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/icons-reference/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/avatar-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/AZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/BZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/CZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/DZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/EC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/EE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/EG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/EH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ER.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ES.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ET.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/EU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/FR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/GY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/HK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/HN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/HR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/HT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/HU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ID.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/IT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/JE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/JM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/JO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/JP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/KZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/LY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ME.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ML.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MQ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/MZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NP.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/NZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/OM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/PY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/QA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/RE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/RO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/RS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/RU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/RW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SB.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ST.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SX.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/SZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TD.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TH.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TK.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TL.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TO.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TR.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/TZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/UA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/UG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/US.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/UY.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/UZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VC.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VG.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VN.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/VU.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/WF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/WS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/YE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/YT.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ZA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ZM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/ZW.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_abkhazia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_basque-country.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_british-antarctic-territory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_commonwealth.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_england.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_gosquared.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_kosovo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_mars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_nagorno-karabakh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_nato.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_northern-cyprus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_olympics.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_red-cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_scotland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_somaliland.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_south-ossetia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_united-nations.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_unknown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/flags/16/_wales.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-blue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-pink.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-red.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-sea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker-violet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/map-marker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/mockup7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/multiselect-switch.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/photos/paul-morris-116514-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/project-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/project-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/project-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/project-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/img/template-mac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/charts-custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/charts-home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/js/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table-locale-all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table-locale-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap-table/bootstrap-table.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/bootstrap/css/bootstrap1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/messages_fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/methods_de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/methods_fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/methods_nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery-validation/localization/methods_pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery.cookie/MIT-LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery.cookie/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery-3.4.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.cookie/MIT-LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.cookie/component.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/js/front.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/vendor/popper/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/common/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/common/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/essay/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/essay/essay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/essay/select-from.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/user/find-essay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/user/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/templates/user/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/keyword-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/keyword-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.lisk.keyword.KeywordApplicationTests.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/surefire-reports/com.lisk.keyword.KeywordApplicationTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/lisk/keyword/KeywordApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keyword.iml" beforeDir="false" afterPath="$PROJECT_DIR$/keyword.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/KeywordApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/KeywordApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/ConsumerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/ConsumerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/EssayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/EssayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/EssayMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/EssayMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Essay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Essay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Label.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/TableParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/TableParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/repository/UserRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/EssayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/EssayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/LabelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/LabelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/LabelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/LabelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/FileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/HttpUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Ltp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Ltp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/MyProps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/MyProps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/ReturnData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/ReturnData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EssayMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EssayMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/LabelMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LabelMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/bower.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-locale-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-locale-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-vue.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-vue.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-vue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table-vue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/accent-neutralise/bootstrap-table-accent-neutralise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/addrbar/bootstrap-table-addrbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/addrbar/bootstrap-table-addrbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cell-input/bootstrap-table-cell-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cookie/bootstrap-table-cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/cookie/bootstrap-table-cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/copy-rows/bootstrap-table-copy-rows.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/copy-rows/bootstrap-table-copy-rows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/defer-url/bootstrap-table-defer-url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/defer-url/bootstrap-table-defer-url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/editable/bootstrap-table-editable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/editable/bootstrap-table-editable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/export/bootstrap-table-export.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/filter-control/bootstrap-table-filter-control.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/fixed-columns/bootstrap-table-fixed-columns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/group-by-v2/bootstrap-table-group-by.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/i18n-enhance/bootstrap-table-i18n-enhance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/key-events/bootstrap-table-key-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/key-events/bootstrap-table-key-events.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/mobile/bootstrap-table-mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/mobile/bootstrap-table-mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/multiple-sort/bootstrap-table-multiple-sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/natural-sorting/bootstrap-table-natural-sorting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/page-jump-to/bootstrap-table-page-jump-to.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/pipeline/bootstrap-table-pipeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/pipeline/bootstrap-table-pipeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/print/bootstrap-table-print.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/print/bootstrap-table-print.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-columns/bootstrap-table-reorder-columns.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/reorder-rows/bootstrap-table-reorder-rows.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/resizable/bootstrap-table-resizable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/resizable/bootstrap-table-resizable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/sticky-header/bootstrap-table-sticky-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/toolbar/bootstrap-table-toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/toolbar/bootstrap-table-toolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/treegrid/bootstrap-table-treegrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/extensions/treegrid/bootstrap-table-treegrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-af-ZA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-af-ZA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-ar-SA.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-ar-SA.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-ca-ES.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-ca-ES.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-cs-CZ.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-cs-CZ.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-da-DK.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-da-DK.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-de-DE.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-de-DE.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-el-GR.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-el-GR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-en-US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-es-AR.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-es-AR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-es-CL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/locale/bootstrap-table-es-CL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/fontastic.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/fontastic.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.blue.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.blue.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.default.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.green.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.green.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.pink.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.pink.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.red.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.red.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.sea.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.sea.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.violet.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.violet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/data/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/data/addresses.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/data/countries.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/data/countries.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/icons-reference/fonts/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons-reference/fonts/dashboard.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/icons-reference/icons-reference.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons-reference/icons-reference.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/icons-reference/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/icons-reference/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/charts-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/charts-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/charts-home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/charts-home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table-locale-all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table-locale-all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap1.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_ar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_ar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_az.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_az.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_ca.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_ca.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_cs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_cs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_da.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_da.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_de.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_el.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_el.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_es.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_es.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_et.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_et.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_eu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_eu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_fa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/messages_fa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_de.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_de.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_fi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_fi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_nl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_nl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_pt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery-validation/localization/methods_pt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery-3.4.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery-3.4.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.cookie/cookie.jquery.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.cookie/cookie.jquery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.cookie/jquery.cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.cookie/jquery.cookie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/vendor/js/front.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/vendor/js/front.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/essay/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/essay/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/essay/essay.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/essay/essay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/essay/select-from.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/essay/select-from.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lisk/keyword/KeywordApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lisk/keyword/KeywordApplicationTests.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="keyword" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/lisk/keyword/KeywordApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1250">
+              <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/DruidConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/CustomMultiThreadingConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/GitHubLookupService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>modal</find>
+      <find>opacity</find>
+      <find>header</find>
+      <find>t4</find>
+      <find>提取</find>
+      <find>System</find>
+      <find>static</find>
+      <find>start</find>
+      <find>getUserListPage</find>
+      <find>listEssays</find>
+      <find>fill</find>
+      <find>data</find>
+      <find>tableInfo3</find>
+      <find>keywords</find>
+      <find>fil</find>
+      <find>fi</find>
+      <find>0000000</find>
+      <find>tableInfo2</find>
+      <find>fin</find>
+      <find>tableInfos</find>
+      <find>Page</find>
+      <find>/essay/addEssay</find>
+      <find>comm</find>
+      <find>tologin</find>
+      <find>login</find>
+      <find>/login</find>
+      <find>user:add</find>
+      <find>role</find>
+      <find>findAll</find>
+      <find>ke</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>PublishedDate</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>D:\IDEA\Project\keyword\src\main\resources\static</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../LandCirculationSystem/src/main/java/com/ruoyi/project/commonality/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/essay/essay.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/essay/insert.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/essay/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/LabelMapper.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/LabelController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/essay/select-from.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/LabelEssay.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/bootstrap-table-master/dist/bootstrap-table.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap-table/bootstrap-table.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/vendor/popper/popper.min.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/TableParams.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Ltp.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/vidio.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/ReturnData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/EssayService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/EssayServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/EssayMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/LabelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/LabelServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/LabelMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/LabelMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Label.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EssayMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/ConsumerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Essay.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/MyConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/userController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/shiro/ShiroConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/DruidConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/shiro/UserRealm.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/suerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/NewEssay/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/NewEssayController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/hello.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/PageHelperConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/EssayController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/lisk/keyword/KeywordApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/KeywordApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/CustomMultiThreadingConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/GitHubLookupService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/JavaWeb/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="E:\JavaWeb\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="keyword" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="keyword" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="keyword" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="510" />
+    <option name="width" value="1350" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keyword" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keyword" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15384616" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.lisk.keyword.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\templates\NewEssay" />
+      <recent name="D:\IDEA\Project\keyword\src\main\java\com\lisk\keyword" />
+      <recent name="D:\IDEA\Project\keyword\src\main\java\com\lisk\keyword\controller" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\mapper" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lisk.keyword.config" />
+      <recent name="com.lisk.keyword.service" />
+      <recent name="com.lisk.keyword.service.impl" />
+      <recent name="com.lisk.keyword.mapper" />
+      <recent name="com.lisk.keyword.pojo" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\static\js" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\static\vendor\bootstrap\css" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\static\vendor\jquery" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\static\vendor\bootstrap" />
+      <recent name="D:\IDEA\Project\keyword\src\main\resources\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.KeywordApplicationTests.testAllData">
+    <configuration name="KeywordApplicationTests.TestThread" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="keyword" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lisk.keyword.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lisk.keyword" />
+      <option name="MAIN_CLASS_NAME" value="com.lisk.keyword.KeywordApplicationTests" />
+      <option name="METHOD_NAME" value="TestThread" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeywordApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="keyword" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lisk.keyword.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lisk.keyword" />
+      <option name="MAIN_CLASS_NAME" value="com.lisk.keyword.KeywordApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeywordApplicationTests.testAllData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="keyword" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lisk.keyword.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.lisk.keyword" />
+      <option name="MAIN_CLASS_NAME" value="com.lisk.keyword.KeywordApplicationTests" />
+      <option name="METHOD_NAME" value="testAllData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeywordApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="keyword" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lisk.keyword.KeywordApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.KeywordApplicationTests.testAllData" />
+        <item itemvalue="JUnit.KeywordApplicationTests.TestThread" />
+        <item itemvalue="JUnit.KeywordApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7fd77e7b-7031-4e61-b0a9-ce20d56153b2" name="Default Changelist" comment="" />
+      <created>1578490388217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578490388217</updated>
+      <workItem from="1578490389639" duration="1326000" />
+      <workItem from="1578491730457" duration="4469000" />
+      <workItem from="1578530067524" duration="28000" />
+      <workItem from="1578533760274" duration="1683000" />
+      <workItem from="1578553023661" duration="502000" />
+      <workItem from="1578555180240" duration="4354000" />
+      <workItem from="1578562040081" duration="36000" />
+      <workItem from="1578645115630" duration="642000" />
+      <workItem from="1578718250919" duration="1125000" />
+      <workItem from="1578729384483" duration="5219000" />
+      <workItem from="1578751088310" duration="4079000" />
+      <workItem from="1579137841873" duration="2997000" />
+      <workItem from="1579508430970" duration="23517000" />
+      <workItem from="1579833125140" duration="4711000" />
+      <workItem from="1579940877022" duration="48000" />
+      <workItem from="1579952561189" duration="2744000" />
+      <workItem from="1580011897675" duration="3909000" />
+      <workItem from="1580269415504" duration="8374000" />
+      <workItem from="1580435433596" duration="614000" />
+      <workItem from="1580616693449" duration="7106000" />
+      <workItem from="1581047643882" duration="4336000" />
+      <workItem from="1581563881886" duration="10500000" />
+      <workItem from="1583572209337" duration="843000" />
+      <workItem from="1583809557474" duration="4097000" />
+      <workItem from="1584145661379" duration="6216000" />
+      <workItem from="1584202529369" duration="380000" />
+      <workItem from="1584226336981" duration="9052000" />
+      <workItem from="1584322762651" duration="7197000" />
+      <workItem from="1584405841632" duration="7275000" />
+      <workItem from="1584492374695" duration="5110000" />
+      <workItem from="1584500970143" duration="530000" />
+      <workItem from="1584501538520" duration="1506000" />
+      <workItem from="1584584706744" duration="6222000" />
+      <workItem from="1584664404376" duration="2444000" />
+      <workItem from="1584752207857" duration="4726000" />
+      <workItem from="1584840185770" duration="21945000" />
+      <workItem from="1585099115226" duration="9563000" />
+      <workItem from="1585184834678" duration="4039000" />
+      <workItem from="1585394713645" duration="9736000" />
+      <workItem from="1585736856883" duration="1293000" />
+      <workItem from="1585817953217" duration="611000" />
+      <workItem from="1585830666806" duration="691000" />
+      <workItem from="1585886798358" duration="1879000" />
+      <workItem from="1585976577624" duration="19821000" />
+      <workItem from="1586227996522" duration="1654000" />
+      <workItem from="1586229665894" duration="1819000" />
+      <workItem from="1586236476316" duration="24069000" />
+      <workItem from="1586420336466" duration="6366000" />
+      <workItem from="1586532443629" duration="937000" />
+      <workItem from="1586568369060" duration="7380000" />
+      <workItem from="1586853321219" duration="155000" />
+      <workItem from="1586922221275" duration="23051000" />
+      <workItem from="1587116563818" duration="22278000" />
+      <workItem from="1587223816886" duration="3595000" />
+      <workItem from="1587256416620" duration="3609000" />
+      <workItem from="1587265307695" duration="23663000" />
+      <workItem from="1587447832093" duration="4841000" />
+      <workItem from="1587474136794" duration="3079000" />
+      <workItem from="1587527490051" duration="3451000" />
+      <workItem from="1587547188099" duration="1351000" />
+      <workItem from="1587616205839" duration="1015000" />
+      <workItem from="1587712922770" duration="102000" />
+      <workItem from="1587713069082" duration="3637000" />
+      <workItem from="1587814498307" duration="22237000" />
+      <workItem from="1588045431505" duration="650000" />
+      <workItem from="1588339731246" duration="869000" />
+      <workItem from="1588414484147" duration="5042000" />
+      <workItem from="1588523029560" duration="377000" />
+      <workItem from="1588550464939" duration="12995000" />
+      <workItem from="1588578813105" duration="1609000" />
+      <workItem from="1588598353395" duration="594000" />
+      <workItem from="1588743770951" duration="597000" />
+      <workItem from="1588818733638" duration="4152000" />
+      <workItem from="1588906765070" duration="5756000" />
+      <workItem from="1588922528903" duration="2918000" />
+      <workItem from="1589177568498" duration="6961000" />
+      <workItem from="1589430073708" duration="867000" />
+      <workItem from="1589466404621" duration="1353000" />
+      <workItem from="1589535226779" duration="581000" />
+      <workItem from="1589544870849" duration="1544000" />
+      <workItem from="1589593423369" duration="4813000" />
+      <workItem from="1589725156526" duration="2130000" />
+      <workItem from="1589790823917" duration="1791000" />
+      <workItem from="1589823109361" duration="3672000" />
+      <workItem from="1589851949477" duration="3847000" />
+      <workItem from="1589875877152" duration="7368000" />
+      <workItem from="1590076705790" duration="328000" />
+      <workItem from="1590110285576" duration="2022000" />
+      <workItem from="1590137065708" duration="815000" />
+      <workItem from="1590220484924" duration="5418000" />
+      <workItem from="1590303081180" duration="2603000" />
+      <workItem from="1590392785620" duration="7426000" />
+      <workItem from="1590410687884" duration="14820000" />
+      <workItem from="1590499811149" duration="964000" />
+      <workItem from="1590538088135" duration="644000" />
+      <workItem from="1590539486167" duration="4315000" />
+      <workItem from="1590568535992" duration="8049000" />
+      <workItem from="1590655088472" duration="2644000" />
+      <workItem from="1595141151295" duration="3095000" />
+      <workItem from="1595152790658" duration="4641000" />
+      <workItem from="1595229190279" duration="4695000" />
+      <workItem from="1595298441374" duration="5836000" />
+      <workItem from="1595403075644" duration="510000" />
+    </task>
+    <task id="LOCAL-00001" summary="添加静态资源">
+      <created>1578495559198</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578495559198</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改git推送不当造成的代码冲突的问题">
+      <created>1578533945346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578533945346</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修改git推送不当造成的代码冲突的问题">
+      <created>1578719117816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578719117816</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改bug">
+      <created>1579520342158</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579520342158</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改bug">
+      <created>1579605436780</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579605436780</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修复bug">
+      <created>1581568454121</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581568454121</updated>
+    </task>
+    <task id="LOCAL-00007" summary="新增文章录入功能">
+      <created>1584323897918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1584323897918</updated>
+    </task>
+    <task id="LOCAL-00008" summary="修复若干个bug，新增查询功能">
+      <created>1586607824173</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586607824173</updated>
+    </task>
+    <task id="LOCAL-00009" summary="优化关键词提取">
+      <created>1588589344714</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588589344715</updated>
+    </task>
+    <task id="LOCAL-00010" summary="回滚代码">
+      <created>1588907508821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588907508821</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="KeywordApplicationTests_TestThread - 2020.07.20 at 16h 05m 53s.xml">
+      <configuration name="KeywordApplicationTests.TestThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_TestThread - 2020.07.20 at 16h 07m 18s.xml">
+      <configuration name="KeywordApplicationTests.TestThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_TestThread - 2020.07.20 at 16h 08m 53s.xml">
+      <configuration name="KeywordApplicationTests.TestThread" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 10h 29m 52s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 10h 33m 37s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 11h 32m 54s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 11h 35m 18s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 11h 41m 14s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 11h 43m 28s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="KeywordApplicationTests_testAllData - 2020.07.21 at 12h 02m 08s.xml">
+      <configuration name="KeywordApplicationTests.testAllData" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="515095000" />
+  </component>
+  <component name="TodoView" selected-index="2">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49425286" visible="true" weight="0.27680966" />
+      <window_info id="Structure" order="1" sideWeight="0.50574714" side_tool="true" weight="0.3230563" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5010142" side_tool="true" weight="0.2580429" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.78470254" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.89209116" weight="0.8626062" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32719547" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.107908845" side_tool="true" weight="0.8626062" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3243626" />
+      <window_info anchor="bottom" id="File Transfer" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24932976" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.02010724" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2533512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.42142856" />
+      <window_info anchor="bottom" id="Debug" order="4" visible="true" weight="0.3611898" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3243626" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3297587" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加静态资源" />
+    <MESSAGE value="修改git推送不当造成的代码冲突的问题" />
+    <MESSAGE value="修改bug" />
+    <MESSAGE value="修复bug" />
+    <MESSAGE value="新增文章录入功能" />
+    <MESSAGE value="优化关键词提取" />
+    <MESSAGE value="修复若干个bug，新增查询功能" />
+    <MESSAGE value="回滚代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="回滚代码" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/EssayController.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="jsonObject.entrySet().toArray()[3]" />
+        <watch expression="((String)param_5).hash" custom="java.lang.String" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/realm/AuthenticatingRealm.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/pam/ModularRealmAuthenticator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/UsernamePasswordToken.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/UnauthorizedException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/shiro/UserRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/suerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/LabelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/unauth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/LabelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyword.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/shiro/ShiroConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/essay/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/NewEssay/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/NewEssayController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/hello.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Essay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/pojo/Label.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/EssayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/look.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/userController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/essay/essay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3350">
+          <caret line="134" column="18" lean-forward="true" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/EssayServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/mapper/EssayMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1975">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#2934#4215#0" />
+            <element signature="e#4235#5518#0" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#5;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EssayMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/LabelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/ConsumerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/EssayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3750">
+          <caret line="180" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#queryContent#0;class#EssayController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/util/Ltp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/PageHelperConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/MyConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/KeywordApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/controller/ExceptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/lisk/keyword/KeywordApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1250">
+          <caret line="71" column="9" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/config/CustomMultiThreadingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lisk/keyword/service/impl/GitHubLookupService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>keyword</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.baomidou:mybatis-plus-boot-starter:2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

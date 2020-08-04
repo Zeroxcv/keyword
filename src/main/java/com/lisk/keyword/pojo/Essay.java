@@ -6,10 +6,10 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.lisk.keyword.util.Page;
 
 import java.util.Date;
-import java.util.List;
 
 @TableName(value = "t_pdarticle")
-public class Essay extends Page {
+//public class Essay extends Page {
+public class Essay {
     //文章id
     @TableId(type = IdType.AUTO)
     int id;
@@ -26,20 +26,21 @@ public class Essay extends Page {
     //文章来源
     String dataSources;
 
-    List<Label> labels;
 
     public Essay() {
 
     }
 
-    public Essay(int id, String textLabel, String title, String textContent, Date publishedDate, String dataSources, List<Label> labels) {
+    public Essay(int id, String textLabel, String title, String textContent, Date PublishedDate, String dataSources) {
+        //文章id
         this.id = id;
+        //文章标题
         this.textLabel = textLabel;
+        //文章标题
         this.title = title;
         this.textContent = textContent;
-        PublishedDate = publishedDate;
+        this.PublishedDate = PublishedDate;
         this.dataSources = dataSources;
-        this.labels = labels;
     }
 
     public int getId() {
@@ -90,14 +91,6 @@ public class Essay extends Page {
         this.dataSources = dataSources;
     }
 
-    public List<Label> getLabels() {
-        return labels;
-    }
-
-    public void setLabels(List<Label> labels) {
-        this.labels = labels;
-    }
-
     @Override
     public String toString() {
         return "Essay{" +
@@ -107,7 +100,6 @@ public class Essay extends Page {
                 ", textContent='" + textContent + '\'' +
                 ", PublishedDate=" + PublishedDate +
                 ", dataSources='" + dataSources + '\'' +
-                ", labels=" + labels +
                 '}';
     }
 }

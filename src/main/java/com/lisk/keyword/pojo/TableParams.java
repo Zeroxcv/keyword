@@ -2,7 +2,7 @@ package com.lisk.keyword.pojo;
 
 public class TableParams<E> {
     private String sortName;
-    private String sortOrder ;
+    private String sortOrder;
     private int pageSize;
     private int pageNumber;
     private E data;

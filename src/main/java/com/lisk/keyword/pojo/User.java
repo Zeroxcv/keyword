@@ -1,50 +1,74 @@
 package com.lisk.keyword.pojo;
 
+
 public class User {
-    private Long id;
-    private String name;
-    private Integer age;
+    private Integer id;
+
+    private String username;
+
+    private String userid;
+
+    private String password;
+
+    private String perms;
 
     public User() {
-
+        super();
     }
 
-    public User(Long id, String name, Integer age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setUserid(String userid) {
+        this.userid = userid;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getPerms() {
+        return perms;
+    }
+
+    public void setPerms(String perms) {
+        this.perms = perms;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
+                ", username='" + username + '\'' +
+                ", userid='" + userid + '\'' +
+                ", password='" + password + '\'' +
+                ", perms='" + perms + '\'' +
                 '}';
     }
 }

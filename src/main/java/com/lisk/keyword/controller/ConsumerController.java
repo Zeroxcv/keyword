@@ -12,8 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 import java.io.UnsupportedEncodingException;
 
 public class ConsumerController {
-    @RequestMapping(value = "consumer/keyword" ,method= RequestMethod.POST)
-    public String getKeyword(@RequestParam("text")String text) throws UnsupportedEncodingException {
+    @RequestMapping(value = "consumer/keyword", method = RequestMethod.POST)
+    public String getKeyword(@RequestParam("text") String text) throws UnsupportedEncodingException {
 //        System.out.println(text);
         String keywordData;
         keywordData = Ltp.getLtpData(new String(text));
@@ -25,9 +25,8 @@ public class ConsumerController {
         JSONObject jsonObject = JSONObject.fromObject(keywordData);
         System.out.println(jsonObject.getString("data"));
         JSONArray jsonArray = JSONArray.fromObject(JSONObject.fromObject(jsonObject.getString("data")).getString("ke"));
-        for(int i = 0; i < jsonArray.size(); i++){
-            System.out.println(jsonArray.getJSONObject(i).getString("word")+" " +jsonArray.getJSONObject(i).getString("score"));
-
+        for (int i = 0; i < jsonArray.size(); i++) {
+            System.out.println(jsonArray.getJSONObject(i).getString("word"));
         }
         //返回JSON数据
 

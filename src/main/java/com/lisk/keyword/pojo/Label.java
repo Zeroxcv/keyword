@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @TableName(value = "t_label")
-public class Label{
+public class Label {
     @TableId(type = IdType.AUTO)
     private int id;
 
@@ -20,17 +20,14 @@ public class Label{
 
     private List<Essay> essayList;
 
-    private double score ;
-
     public Label() {
     }
 
-    public Label(int id, String labelName, int pdarticleId, List<Essay> essayList, double score) {
+    public Label(int id, String labelName, int pdarticleId, double score, List<Essay> essayList) {
         this.id = id;
         this.labelName = labelName;
         this.pdarticleId = pdarticleId;
         this.essayList = essayList;
-        this.score = score;
     }
 
     public int getId() {
@@ -57,20 +54,13 @@ public class Label{
         this.pdarticleId = pdarticleId;
     }
 
+
     public List<Essay> getEssayList() {
         return essayList;
     }
 
     public void setEssayList(List<Essay> essayList) {
         this.essayList = essayList;
-    }
-
-    public double getScore() {
-        return score;
-    }
-
-    public void setScore(double score) {
-        this.score = score;
     }
 
     @Override
@@ -80,7 +70,6 @@ public class Label{
                 ", labelName='" + labelName + '\'' +
                 ", pdarticleId=" + pdarticleId +
                 ", essayList=" + essayList +
-                ", score=" + score +
                 '}';
     }
 }
