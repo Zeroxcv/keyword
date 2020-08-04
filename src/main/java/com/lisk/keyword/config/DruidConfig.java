@@ -32,6 +32,21 @@ public class DruidConfig {
         initParams.put("allow","");//默认允许ip访问
         initParams.put("deny","");
         bean.setInitParameters(initParams);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         return bean;
     }
     //2.配置一个监控的filter
