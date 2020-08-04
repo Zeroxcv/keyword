@@ -44,9 +44,6 @@ public class DruidConfig {
 
 
 
-
-
-
         return bean;
     }
     //2.配置一个监控的filter

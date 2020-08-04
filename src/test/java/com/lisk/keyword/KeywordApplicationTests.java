@@ -111,6 +111,78 @@ class KeywordApplicationTests {
         ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(10);
         for (Essay essay : lists) {
 
+    @Test
+    void testAllData() throws Exception {
+        List<Essay> list = essayService.findAll();
+        DataConversion(list);
+    }
+    @Transactional
+    public void DataConversion(List<Essay> list) throws Exception {
+
+        List<JSONArray> keywordLists = new LinkedList<>();
+        Map<String, Object> map = new HashMap<>();
+        List<Essay> essayList = new LinkedList<>();
+        List<Future<String>> futures = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i);
+            Essay essay = list.get(i);
+            String eText = essay.getTextContent().replaceAll("\n", "");
+            Future<String> future=  gitHubLookupService.keywordData(eText, essay);
+            futures.add(future);
+//            keywordLists.add(jsonArray);
+//            essayList.add(essay);
+
+        }
+        List<String> response = new ArrayList<>();
+
+        for (Future future : futures) {
+            String string = (String) future.get();
+            response.add(string);
+        }
+        System.out.println(response.toString());
+//        for (int i = 0;i < keywordLists.size(); i++){
+//            JSONArray jsonArray = keywordLists.get(i);
+//            Essay essay = essayList.get(i);
+//            try {
+//            for (int j = 0; j < jsonArray.size(); j++) {
+//
+//                double score = Double.valueOf(jsonArray.getJSONObject(j).getString("score"));
+//                if (score >= 0.560) {
+//                    EntityWrapper ew = new EntityWrapper();
+//                    ew.setSqlSelect("id,label_name,pdarticle_id");
+//                    ew.eq("label_name", jsonArray.getJSONObject(j).getString("word"));
+//                    List<Label> labelLists = labelService.selectList(ew);
+//                    if (labelLists.size() > 0) {
+//
+//                        for (int k = 0; k < labelLists.size(); k++) {
+//                            //关系表
+//                            labelService.insertPdarticleLabel(labelLists.get(k).getId(), essay.getId(), score);
+//                        }
+//                    } else {
+//                        Label label = new Label();
+//                        label.setPdarticleId(essay.getId());
+//                        label.setLabelName(jsonArray.getJSONObject(j).getString("word"));
+//                        labelService.insert(label);
+//                        //关系表
+//                        labelService.insertPdarticleLabel(label.getId(), essay.getId(), score);
+//                    }
+//                }
+//            }
+//        } catch (Exception e) {
+//        }
+//        }
+
+
+
+        }
+    }
+}
+    @Test
+    public void TestThread(){
+        List<Essay> lists = essayService.findAll();
+        ExecutorService newFixedThreadPool = Executors.newFixedThreadPool(10);
+        for (Essay essay : lists) {
+
 
         }
     }
